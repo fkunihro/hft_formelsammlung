@@ -5,11 +5,11 @@
 
 \usepackage[landscape]{geometry}
 \usepackage{multicol}
-%für Querformat: "landscape" bei documentclass und geometry eintragen
+% for landscape format: insert "landscape" at documentclass and geometry
 
 \usepackage{float}
 \usepackage{graphicx}
-\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{amsmath, amsfonts, amssymb,esint}
 \usepackage{trfsigns}
 
 \geometry{top=0.5cm,left=1cm,right=1cm,bottom=0.5cm}
@@ -17,7 +17,7 @@
 \setlength{\mathindent}{0mm}
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{0mm}
-\setlength{\jot}{0pt}
+\setlength{\jot}{5pt}
 \setlength{\abovedisplayskip}{0pt}
 \setlength{\belowdisplayskip}{5pt}
 \setlength{\abovedisplayshortskip}{0pt}
@@ -44,32 +44,52 @@
                                 {1ex plus .2ex}%
                                 {\normalfont\small\bfseries}}
 
-\g@addto@macro\small{%
+\g@addto@macro\normalsize{	% adapt if changing fontsize
   \setlength\abovedisplayskip{5pt}
   \setlength\belowdisplayskip{5pt}
   \setlength\abovedisplayshortskip{5pt}
   \setlength\belowdisplayshortskip{5pt}
-}
-                              
+}                   
                                 
 \makeatother
 \setcounter{secnumdepth}{0}
 
-% Command fuer Erwartungswert
-\newcommand{\EW}{\mathbb{E}}
+% Command Defs ------------------------------------------------------------------------------------------------
 
-% Command fuer horizontale Trennlinie
-\newcommand{\HL}{\rule{\linewidth}{0.25pt}}
+% Command for horizontal separation line
+\newcommand{\EW}{\mathbb{E}}\newcommand{\HL}{\rule{\linewidth}{0.25pt}}
 
-% Wkt. geht mit \Pr
+\newcommand{\vc}[1]{\vec{\underline{#1}}} 		% <-- Use this shit for komplex vectors: 	example: \vc{H}
+\renewcommand{\c}[1]{\underline{#1}}			% <-- Use this shit für komplexe scalars: 	example: \c{H}_x
+\renewcommand{\j}{{\mathrm j}}					% imaginary unit
+\newcommand{\D}{{\mathrm d}}					% differential d for dx and stuff
+
+% -------------------------------------------------------------------------------------------------------------
 
 \pagestyle{empty}
 
 \begin{document}
 	
-\small
-\begin{multicols}{3}
-	
+%\small
+\begin{multicols}{2}
+\subsection{Zeitharmonische Maxwell-Gleichungen}
+für anisotrope, homogene Medien
+	\begin{align*}
+	\nabla\times\vc{H} &= \vc{J} + \j\omega\varepsilon\vc{E} &\iff&& \oint_{\partial A}\vc{H}\cdot\D\vec{s} &= \iint_A\left( \vc{J} + \j\omega\varepsilon\vc{E}\right) \cdot\D\vec{A}\\
+	-\nabla\times\vc{E} &= \vc{M} + \j\omega\mu\vc{H} &\iff&& -\oint_{\partial A}\vc{E}\cdot\D\vec{s} &= \iint_A\left( \vc{M} + \j\omega\mu\vc{H}\right) \cdot\D\vec{A}\\
+	\nabla\cdot\vc{H}&=\c{\rho}_m/\mu &\iff&& \varoiint_{\partial V}\vc{H}\cdot\D\vec{A}&=\frac{1}{\mu}\iiint_V \c{\rho}_m\D V\\
+	\nabla\cdot\vc{E}&=\c{\rho}_e/\varepsilon &\iff&& \varoiint_{\partial V}\vc{E}\cdot\D\vec{A}&=\frac{1}{\varepsilon}\iiint_V \c{\rho}_e\D V
+	\end{align*}
+für Freiraumausbreitung und allgemein Vakuum: $\c{\rho}_e=\c{\rho}_m=0$ und $\vc{J}=\vc{M}=\vec{0}$
+
+Poynting-Vektor; Wirkleistung
+	\begin{equation*}
+	\vc{S}=\frac{1}{2}\vc{E}\times\vc{H}^*\quad;\quad P=\varoiint\Re\left\lbrace \vc{S} \right\rbrace \D\vec{A} =\frac{1}{2}\varoiint\Re\left\lbrace \vc{E}\times\vc{H}^* \right\rbrace \D\vec{A}
+	\end{equation*}
+
+\subsection{EM-Wellen: allgemeine Zusammenhänge}
+
+
 \subsection*{Wellenleiter (konstanter Querschnitt)}
 	\begin{equation*}
 	\lambda=\frac{\lambda_0}{\sqrt{1-\left(\frac{\beta_c}{\beta_0 }\right)^2 }}=\frac{\lambda_0}{\sqrt{1-\left(\frac{f_c}{f}\right)^2 }}=\frac{\lambda_0}{\sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2 }}
