@@ -87,7 +87,7 @@ Poynting-Vektor; Wirkleistung
 	\vc{S}=\frac{1}{2}\vc{E}\times\vc{H}^*\quad;\quad P=\varoiint\Re\left\lbrace \vc{S} \right\rbrace \D\vec{A} =\frac{1}{2}\varoiint\Re\left\lbrace \vc{E}\times\vc{H}^* \right\rbrace \D\vec{A}
 	\end{equation*}
 
-\subsection{EM-Wellen: allgemeine Zusammenhänge}
+\section{EM-Wellen: allgemeine Zusammenhänge}
 
 \subsection*{Wellenleiter (konstanter Querschnitt)}
 	\begin{equation*}
@@ -137,6 +137,38 @@ TM-Wellen
 		Z_{FE} &= \pm\frac{\vc{E}_x}{\vc{H}_y} = \mp\frac{\vc{E}_y}{\vc{H}_x} = \frac{\beta}{\omega\varepsilon} = \frac{\beta_0\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}}{\omega\varepsilon} \\
 		&= Z_F \sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2} = Z_F \sqrt{1-\left(\frac{f_c}{f_0}\right)^2} = Z_F \sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2}
 	\end{align*}
+	
+\section{Antennentheorie}
+
+\subsection{Kenngrößen von Antennen}
+Strahlungsleistungsdichte (Kugel/Dipol)
+	\begin{equation*}
+		S_0=\frac{P}{4\pi r^2} \qquad S(\vartheta,\varphi)=\frac{1}{2}Z_F\left(\frac{\beta|\c{I}_0|l\sin(\vartheta)}{4\pi r}\right)^2	
+	\end{equation*}
+Richtfaktor
+	\begin{equation*}
+		D=\frac{S_{\text{max}}}{S_0}	=\frac{S_{\text{max}}}{P}\cdot4\pi r \qquad \text{bzw.} \qquad D(\vartheta,\varphi)=\frac{S(\vartheta,\varphi)}{S_0}
+	\end{equation*}
+Gewinn
+	\begin{equation*}
+		G=\eta D	
+	\end{equation*}
+Zusammenhang zwischen Wirkfläche und Gewinn für alle Antennen
+	\begin{equation*}
+		\frac{A}{G}=\frac{\lambda^2}{4\pi}
+	\end{equation*}
+Richcharakteristik
+	\begin{equation*}
+		C(\vartheta,\varphi)=\frac{\left\Vert\vc{E}(\vartheta,\varphi)\right\Vert}{\left\Vert\vc{E}\right\Vert_\text{max}}=\frac{\left\Vert\vc{H}(\vartheta,\varphi)\right\Vert}{\left\Vert\vc{H}\right\Vert_\text{max}}=\sqrt{\frac{S(\vartheta,\varphi)}{S_\text{max}}}
+	\end{equation*}
+Abgestrahlte Leistung
+	\begin{equation*}
+		P=\oiint S\D A = \oiint S_0DC^2(\vartheta,\varphi)\D A
+	\end{equation*}
+Fußpunktimpedanz und Strahlungswiderstand
+	\begin{equation*}
+		\c{Z}_\text{A}=\frac{\c{U}_0}{\c{I}_0} \qquad R_\text{S}=\frac{2P}{|\c{I}_0|^2}
+	\end{equation*}
 \end{multicols}	
 
 \end{document}
