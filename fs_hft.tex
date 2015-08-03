@@ -95,6 +95,21 @@ Poynting-Vektor; Wirkleistung
 	\lambda=\frac{\lambda_0}{\sqrt{1-\left(\frac{\beta_c}{\beta_0 }\right)^2 }}=\frac{\lambda_0}{\sqrt{1-\left(\frac{f_c}{f}\right)^2 }}=\frac{\lambda_0}{\sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2 }}
 	\end{equation*}
 
+\subsection*{Feldwellenwiderstand}
+TEM-Wellen
+	\begin{align*}
+		\frac{\vc{E}_x}{\vc{H}_y} &= -\frac{\vc{E}_y}{\vc{H}_x} = \pm\frac{\omega\mu}{\beta} = \pm\sqrt{\frac{\mu}{\varepsilon}} = \pm Z_F \\
+		Z_{F0} &= \sqrt{\frac{\mu_0}{\varepsilon_0}} = 120\pi\Omega = 377\Omega
+	\end{align*}
+TE-Wellen
+	\begin{equation*}
+		Z_{FH} = \pm\frac{\vc{E}_x}{\vc{H}_y} = \mp\frac{\vc{E}_y}{\vc{H}_x} = \frac{\omega\mu}{\beta} = \frac{\omega\mu}{\beta_0\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}} = \frac{Z_F}{\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}} = \frac{Z_F}{\sqrt{1-\left(\frac{f_c}{f_0}\right)^2}} = \frac{Z_F}{\sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2}}
+	\end{equation*}
+TM-Wellen
+	\begin{align*}
+		Z_{FE} &= \pm\frac{\vc{E}_x}{\vc{H}_y} = \mp\frac{\vc{E}_y}{\vc{H}_x} = \frac{\beta}{\omega\varepsilon} = \frac{\beta_0\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}}{\omega\varepsilon} \\
+		&= Z_F \sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2} = Z_F \sqrt{1-\left(\frac{f_c}{f_0}\right)^2} = Z_F \sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2}
+	\end{align*}
 \end{multicols}	
 
 \end{document}
