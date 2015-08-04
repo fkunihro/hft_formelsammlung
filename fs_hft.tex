@@ -169,6 +169,35 @@ Fußpunktimpedanz und Strahlungswiderstand
 	\begin{equation*}
 		\c{Z}_\text{A}=\frac{\c{U}_0}{\c{I}_0} \qquad R_\text{S}=\frac{2P}{|\c{I}_0|^2}
 	\end{equation*}
+\section{Zweitore}
+\subsection{Wellengrößen}
+	\includegraphics[width=0.5\linewidth]{img/zweitore}
+	
+Komplexe Wellenamplituden
+	\begin{align*}
+		a_i&=\frac{U_{\text{h}i}}{\sqrt{Z_{\text{L}_i}}} \qquad \text{(hinlaufenden normierte Spannungswelle an Tor $i$)}\\
+		b_i&=\frac{U_{\text{r}i}}{\sqrt{Z_{\text{L}i}}} \qquad \text{(rücklaufende normierte Spannungswelle an Tor $i$)}
+	\end{align*}
+Spannung und Strom an Tor $i$
+	\begin{align*}
+		U_i&=(a_i+b_i)\sqrt{Z_{\text{L}i}} & a_i&=\frac{U_i+Z_{\text{L}i}I_i}{2\sqrt{Z_{\text{L}i}}} \\
+		I_i&=\frac{a_i-b_i}{\sqrt{Z_{\text{L}i}}} & b_i&=\frac{U_i-Z_{\text{L}i}I_i}{2\sqrt{Z_{\text{L}i}}}
+	\end{align*}
+Wirkleistung
+	\begin{equation*}
+		P_{wai}=\frac{1}{2}a_ia_i^*=\frac{U_{\text{h}i}U_{\text{h}i}^*}{2Z_{\text{L}i}}=\frac{1}{2}|a_i|^2 \qquad P_{wbi}=\frac{1}{2}b_ib_i^*=\frac{U_{\text{r}i}U_{\text{r}i}^*}{2Z_{\text{L}i}}=\frac{1}{2}|b_i|^2
+	\end{equation*}
+\subsection{Streuparameter}
+\includegraphics[width=0.5\linewidth]{img/streuparameter}
+
+Reflexionsfaktoren
+	\begin{equation*}
+		s_{ii}=\frac{Z_{\text{E}i}-Z_{\text{L}i}}{Z_{\text{E}i}+Z_{\text{L}i}}
+	\end{equation*}
+Transmissionsfaktoren
+	\begin{equation*}
+		s_{ji}=\frac{2U_j}{U_{0i}}\sqrt{\frac{Z_{\text{L}i}}{Z_{\text{L}j}}}
+	\end{equation*}
 \end{multicols}	
 
 \end{document}
