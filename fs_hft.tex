@@ -11,6 +11,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath, amsfonts, amssymb,esint}
 \usepackage{trfsigns}
+\usepackage{bm}
 
 \geometry{top=0.5cm,left=1cm,right=1cm,bottom=0.5cm}
 
@@ -63,7 +64,7 @@
 \renewcommand{\c}[1]{\underline{#1}}			% <-- Use this shit für komplexe scalars: 	example: \c{H}_x
 \renewcommand{\j}{{\mathrm j}}					% imaginary unit
 \newcommand{\D}{{\mathrm d}}					% differential d for dx and stuff
-
+\newcommand{\matr}[1]{\bm{#1}}				% <-- use this shit for ISO-complying matrix notation
 % -------------------------------------------------------------------------------------------------------------
 
 \pagestyle{empty}
@@ -186,6 +187,55 @@ Spannung und Strom an Tor $i$
 Wirkleistung
 	\begin{equation*}
 		P_{wai}=\frac{1}{2}a_ia_i^*=\frac{U_{\text{h}i}U_{\text{h}i}^*}{2Z_{\text{L}i}}=\frac{1}{2}|a_i|^2 \qquad P_{wbi}=\frac{1}{2}b_ib_i^*=\frac{U_{\text{r}i}U_{\text{r}i}^*}{2Z_{\text{L}i}}=\frac{1}{2}|b_i|^2
+	\end{equation*}
+\subsection{Matrizen}
+Streumatrix
+	\begin{equation*}
+		\c{\matr{b}} = \c{\matr{S}}\cdot\c{\matr{a}}
+	\end{equation*}
+Transmissionsmatrix
+	\begin{align*}
+		\begin{pmatrix}
+			\c{a}_1\\
+			\c{b}_1
+		\end{pmatrix}
+		&=
+		\begin{pmatrix}
+			\c{T}_{11} & \c{T}_{12}\\
+			\c{T}_{21} & \c{T}_{22}	
+		\end{pmatrix}
+		\cdot
+		\begin{pmatrix}
+			\c{b}_2\\
+			\c{a}_2
+		\end{pmatrix}\\
+		\c{\matr{T}} &= \frac{1}{\c{S}_{21}}\cdot
+		\begin{pmatrix}
+			1 & -\c{S}_{22}\\
+			\c{S}_{11} & -\det(\c{\matr{S}})
+		\end{pmatrix}\\
+		\c{\matr{S}} &= \frac{1}{\c{T}_{11}}\cdot
+		\begin{pmatrix}
+			\c{T}_{21} & \det(\c{\matr{T}})\\
+			1 & -\c{T}_{12}
+		\end{pmatrix}
+	\end{align*}
+Kettenmatrix
+	\begin{equation*}
+		\begin{pmatrix}
+			\c{U}_1\\
+			\c{I}_1
+		\end{pmatrix}
+		=
+		\begin{pmatrix}
+			\c{A} & \c{B}\\
+			\c{C} & \c{D}
+		\end{pmatrix}
+		\cdot
+		\begin{pmatrix}
+			\c{U}_2\\
+			-\c{I}_2
+		\end{pmatrix}
 	\end{equation*}
 \subsection{Streuparameter}
 \includegraphics[width=0.5\linewidth]{img/streuparameter}
