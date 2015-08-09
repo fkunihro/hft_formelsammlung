@@ -183,24 +183,42 @@ Wellenwiderstand
 	\begin{equation*}
 		\pm Z_\text{L}=\frac{\c{U}(z)}{\c{I}(z)}=\frac{\c{U}_0}{\c{I}_0}
 	\end{equation*}
-\subsection*{Feldwellenwiderstand}
-TEM-Wellen
-	\begin{align*}
-		\frac{\vc{E}_x}{\vc{H}_y} &= -\frac{\vc{E}_y}{\vc{H}_x} = \pm\frac{\omega\mu}{\beta} = \pm\sqrt{\frac{\mu}{\varepsilon}} = \pm Z_F \\
-		Z_{F0} &= \sqrt{\frac{\mu_0}{\varepsilon_0}} = 120\pi\Omega = 377\Omega
-	\end{align*}
-TE-Wellen
+\subsection{Koaxialleitung}
+	Wellenwiderstand
 	\begin{equation*}
-		Z_{FH} = \pm\frac{\vc{E}_x}{\vc{H}_y} = \mp\frac{\vc{E}_y}{\vc{H}_x} = \frac{\omega\mu}{\beta} = \frac{\omega\mu}{\beta_0\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}} = \frac{Z_F}{\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}} = \frac{Z_F}{\sqrt{1-\left(\frac{f_c}{f_0}\right)^2}} = \frac{Z_F}{\sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2}}
+		Z_\text{L}=\frac{1}{2\pi}Z_{\text{F}0}\ln\left(\frac{D}{d}\right)
 	\end{equation*}
+	Leistung
+	\begin{equation*}
+		P=\frac{1}{2}Z_\text{L}I^2_{\text{max}}=\frac{1}{2}\frac{U^2_{\text{max}}}{Z_\text{L}}
+	\end{equation*}
+	Feldstärken
+	\begin{equation*}
+		H_\text{max}=\frac{I_\text{max}}{\pi d} \qquad E_\text{max}=Z_\text{F}H_\text{max}
+	\end{equation*}
+	Strahlungsleistungsdichten Innen- und Außenleiter
+	\begin{equation*}
+		S_\text{I}=\frac{1}{2}E_\text{max}\cdot H_\text{max} \qquad S_\text{A}=S_\text{I}\frac{d^2}{D^2}
+	\end{equation*}
+	
+\subsection*{Feldwellenwiderstand}
+TE-Wellen
+	\begin{align*}
+		Z_{FH} &= \pm\frac{\vc{E}_x}{\vc{H}_y} = \mp\frac{\vc{E}_y}{\vc{H}_x}\\
+		&= \frac{\omega\mu}{\beta} = \frac{\omega\mu}{\beta_0\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}} = \frac{Z_F}{\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}} = \frac{Z_F}{\sqrt{1-\left(\frac{f_c}{f_0}\right)^2}} = \frac{Z_F}{\sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2}}
+	\end{align*}
 TM-Wellen
 	\begin{align*}
 		Z_{FE} &= \pm\frac{\vc{E}_x}{\vc{H}_y} = \mp\frac{\vc{E}_y}{\vc{H}_x} = \frac{\beta}{\omega\varepsilon} = \frac{\beta_0\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}}{\omega\varepsilon} \\
 		&= Z_F \sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2} = Z_F \sqrt{1-\left(\frac{f_c}{f_0}\right)^2} = Z_F \sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2}
 	\end{align*}
+TEM-Wellen
+	\begin{align*}
+		\frac{\vc{E}_x}{\vc{H}_y} &= -\frac{\vc{E}_y}{\vc{H}_x} = \pm\frac{\omega\mu}{\beta} = \pm\sqrt{\frac{\mu}{\varepsilon}} = \pm Z_F \\
+		Z_{F0} &= \sqrt{\frac{\mu_0}{\varepsilon_0}} = 120\pi\Omega = 377\Omega
+	\end{align*}
 	
 \section{Antennentheorie}
-
 \subsection{Kenngrößen von Antennen}
 Strahlungsleistungsdichte (Kugel/Dipol)
 	\begin{equation*}
