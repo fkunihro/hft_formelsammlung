@@ -13,6 +13,7 @@
 \usepackage{trfsigns}
 \usepackage{bm}
 \usepackage{empheq}
+\usepackage{siunitx}
 
 \geometry{top=0.5cm,left=1cm,right=1cm,bottom=0.5cm}
 
@@ -91,6 +92,14 @@ Poynting-Vektor; Wirkleistung
 	\end{equation*}
 	
 \section{Polarisation}
+\subsection{Drehsinn und Form}
+\begin{itemize}
+	\item $\SI{0}{\degree}<a_\text{x}-a_\text{y}<\SI{180}{\degree}$ : $E_{0\text{x}}$ eilt $E_{0\text{y}}$ vor, rechtsdrehend
+	\item $\SI{0}{\degree}<a_\text{y}-a_\text{x}<\SI{180}{\degree}$ : $E_{0\text{y}}$ eilt $E_{0\text{x}}$ vor, linksdrehend
+	\item $a_\text{x}-a_\text{y}=\SI{0}{\degree}$ oder $a_\text{x}-a_\text{y}=\SI{180}{\degree}$ : $E_{0\text{x}}$ oder $E_{0\text{y}}$ gleich- oder gegenphasig, linear
+	\item $a_\text{x}-a_\text{y}=\SI{90}{\degree}$ und $|\c{E}_{0\text{x}}|=|\c{E}_{0\text{y}}|$ : rechtsdrehend, zirkular
+	\item $a_\text{y}-a_\text{x}=\SI{90}{\degree}$ und $|\c{E}_{0\text{x}}|=|\c{E}_{0\text{y}}|$ : linksdrehend, zirkular
+\end{itemize}
 \subsection{HowTo: zeichnen einer Polarisationsellipse}
 \begin{enumerate}
 	\item Realteile der komplexen Amplituden
