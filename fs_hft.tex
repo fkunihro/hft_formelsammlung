@@ -12,6 +12,7 @@
 \usepackage{amsmath, amsfonts, amssymb,esint}
 \usepackage{trfsigns}
 \usepackage{bm}
+\usepackage{empheq}
 
 \geometry{top=0.5cm,left=1cm,right=1cm,bottom=0.5cm}
 
@@ -65,7 +66,8 @@
 \renewcommand{\j}{{\mathrm j}}					% imaginary unit
 \newcommand{\D}{{\mathrm d}}					% differential d for dx and stuff
 \newcommand{\matr}[1]{\bm{#1}}				% <-- use this shit for ISO-complying matrix notation
-% -------------------------------------------------------------------------------------------------------------
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}	% <-- because abs are to mainstream
+%-------------------------------------------------------------------------------------------------------------
 
 \pagestyle{empty}
 
@@ -87,7 +89,52 @@ Poynting-Vektor; Wirkleistung
 	\begin{equation*}
 	\vc{S}=\frac{1}{2}\vc{E}\times\vc{H}^*\quad;\quad P=\varoiint\Re\left\lbrace \vc{S} \right\rbrace \D\vec{A} =\frac{1}{2}\varoiint\Re\left\lbrace \vc{E}\times\vc{H}^* \right\rbrace \D\vec{A}
 	\end{equation*}
-
+	
+\section{Polarisation}
+\subsection{HowTo: zeichnen einer Polarisationsellipse}
+\begin{enumerate}
+	\item Realteile der komplexen Amplituden
+		\begin{align*}
+			E_{0\text{x}}&=\Re{\left\{ \c{E}_{0\text{x}}e^{j\omega t}\right\}} = A\cos(\omega t) - B\sin(\omega t) \\
+			E_{0\text{y}}&=\Re{\left\{ \c{E}_{0\text{y}}e^{j\omega t}\right\}} = C\cos(\omega t) - D\sin(\omega t)
+		\end{align*}
+	\item Maximalwerte der Komponenten berechnen
+		\begin{align*}
+			E_{0\text{x,max}}&=|E_{0\text{x}}|=\sqrt{A^2+B^2}\\
+			E_{0\text{y,max}}&=|E_{0\text{y}}|=\sqrt{C^2+D^2}
+		\end{align*}
+	\item Betrag des Ellipsenradius
+		\begin{equation*}
+			\norm{\vec{E}_0}=\sqrt{E^2_{0\text{x}}+E^2_{0\text{y}}}=\sqrt{A_0+A_1\cos(2\omega t)-A_2\sin(2\omega t)}
+		\end{equation*}
+		verwendete Additionstheoreme:
+		\begin{empheq}[box=\fbox]{align*}
+			\cos^2(\alpha)&=\frac{1}{2}(1+\cos(2\alpha))\\
+			\sin^2(\alpha)&=\frac{1}{2}(1-\cos(2\alpha))\\
+			\sin(\alpha)\cos(\beta)&=\frac{1}{2	}(\sin(\alpha-\beta)+\sin(\alpha+\beta))
+		\end{empheq}
+	\item Umformen des hinteren Ausdrucks
+		\begin{align*}
+			A_1\cos(2\omega t)-A_2\sin(2\omega t)&=\Re\left\{(A_1+jA_2)e^{j2\omega t}\right\}\\
+			&=\sqrt{A_1^2+A_2^2}\cos\left(2\omega t+\arctan\left(\frac{A_2}{A_1}\right)\right)
+		\end{align*}
+	\item maximale und minimale Amplitude
+		\begin{equation*}
+			E_{^\text{max}_\text{min}}=\sqrt{A_0\pm\sqrt{A_1^2+A_2^2}}
+		\end{equation*}
+	\item Berechnung der Zeitpunkte aus der Phase
+		\begin{equation*}
+			2\omega t_{^\text{max}_\text{min}}+\arctan\left(\frac{A_2}{A_1}\right)=
+			\begin{matrix}
+				0\\
+				+\pi
+			\end{matrix}
+		\end{equation*}
+	\item Winkel der maximalen und Minimalen Amplituden
+		\begin{equation*}
+			\tan(\alpha)=\frac{E_{0\text{y}}\left(t_{^\text{max}_\text{min}}\right)}{E_{0\text{x}}\left(t_{^\text{max}_\text{min}}\right)}=\frac{C\cos\left(\omega t_{^\text{max}_\text{min}}\right)-D\sin\left(\omega t_{^\text{max}_\text{min}}\right)}{A\cos\left(\omega t_{^\text{max}_\text{min}}\right)-B\sin\left(\omega t_{^\text{max}_\text{min}}\right)}
+		\end{equation*}
+\end{enumerate}
 \section{EM-Wellen: allgemeine Zusammenhänge}
 
 \subsection*{Wellenleiter (konstanter Querschnitt)}
