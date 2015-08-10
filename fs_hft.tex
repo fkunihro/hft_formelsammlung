@@ -224,13 +224,9 @@ Richtfaktor
 	\begin{equation*}
 		D=\frac{S_{\text{max}}}{S_0}	=\frac{S_{\text{max}}}{P}\cdot4\pi r \qquad \text{bzw.} \qquad D(\vartheta,\varphi)=\frac{S(\vartheta,\varphi)}{S_0}
 	\end{equation*}
-Gewinn
+Gewinn und Zusammenhang mit Wirkfläche für alle Antennen
 	\begin{equation*}
-		G=\eta D	
-	\end{equation*}
-Zusammenhang zwischen Wirkfläche und Gewinn für alle Antennen
-	\begin{equation*}
-		\frac{A}{G}=\frac{\lambda^2}{4\pi}
+		G=\eta D \qquad \frac{A}{G}=\frac{\lambda^2}{4\pi}
 	\end{equation*}
 Richcharakteristik
 	\begin{equation*}
@@ -247,7 +243,6 @@ Fußpunktimpedanz und Strahlungswiderstand
 \section{Reflexion}
 \subsection{Abstandsabhängige komplexe Wellenamplituden}
 	\includegraphics[width=0.5\linewidth]{img/wellenleiter}
-	
 	\begin{align*}
 		\c{a}(z)&=\c{a}_0(z)e^{-j\beta z} & \c{\Gamma}_0&=\frac{\c{b}_0}{\c{a}_0}\\ 
 		\c{b}(z)&=\c{b}_0(z)e^{+j\beta z} & \c{\Gamma}(z)&=\frac{\c{a}(z)}{\c{b}(z)}=\frac{\c{b}_0e^{+j\beta z}}{\c{a}_0e^{-j\beta z}}=\c{\Gamma}_0e^{+j2\beta z}\\
@@ -258,7 +253,8 @@ Fußpunktimpedanz und Strahlungswiderstand
 	\end{equation*}
 \section{Zweitore}
 \subsection{Wellengrößen}
-	\includegraphics[width=0.5\linewidth]{img/zweitore}
+	\includegraphics[width=0.5\linewidth]{img/zweitor1}
+	\includegraphics[width=0.5\linewidth]{img/zweitor2}
 	
 Komplexe Wellenamplituden
 	\begin{align*}
@@ -299,8 +295,8 @@ Transmissionsmatrix
 		\begin{pmatrix}
 			1 & -\c{S}_{22}\\
 			\c{S}_{11} & -\det(\c{\matr{S}})
-		\end{pmatrix}\\
-		\c{\matr{S}} &= \frac{1}{\c{T}_{11}}\cdot
+		\end{pmatrix} \qquad
+		\c{\matr{S}} = \frac{1}{\c{T}_{11}}\cdot
 		\begin{pmatrix}
 			\c{T}_{21} & \det(\c{\matr{T}})\\
 			1 & -\c{T}_{12}
@@ -326,13 +322,9 @@ Kettenmatrix
 \subsection{Streuparameter}
 	\includegraphics[width=0.5\linewidth]{img/streuparameter}
 
-Reflexionsfaktoren
+Reflexions- und Transmissionsfaktoren
 	\begin{equation*}
-		\c{S}_{ii}=\frac{Z_{\text{E}i}-Z_{\text{L}i}}{Z_{\text{E}i}+Z_{\text{L}i}}
-	\end{equation*}
-Transmissionsfaktoren
-	\begin{equation*}
-		\c{S}_{ji}=\frac{2U_j}{U_{0i}}\sqrt{\frac{Z_{\text{L}i}}{Z_{\text{L}j}}} \qquad \mbox{Statt Spannungsverhältnis Widerstandsverhältnis einsetzen}
+		\c{S}_{ii}=\frac{Z_{\text{E}i}-Z_{\text{L}i}}{Z_{\text{E}i}+Z_{\text{L}i}} \qquad \c{S}_{ji}=\frac{2U_j}{U_{0i}}\sqrt{\frac{Z_{\text{L}i}}{Z_{\text{L}j}}} \qquad \parbox{0.4\linewidth}{Statt Spannungsverhältnis Widerstandsverhältnis einsetzen}
 	\end{equation*}
 \section{Smith-Diagramme}
 \subsection{Ablesen und Antragen der Werte}
