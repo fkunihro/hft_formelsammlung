@@ -244,6 +244,18 @@ Fußpunktimpedanz und Strahlungswiderstand
 	\begin{equation*}
 		\c{Z}_\text{A}=\frac{\c{U}_0}{\c{I}_0} \qquad R_\text{S}=\frac{2P}{|\c{I}_0|^2}
 	\end{equation*}
+\section{Reflexion}
+\subsection{Abstandsabhängige komplexe Wellenamplituden}
+	\includegraphics[width=0.5\linewidth]{img/wellenleiter}
+	
+	\begin{align*}
+		\c{a}(z)&=\c{a}_0(z)e^{-j\beta z} & \c{\Gamma}_0&=\frac{\c{b}_0}{\c{a}_0}\\ 
+		\c{b}(z)&=\c{b}_0(z)e^{+j\beta z} & \c{\Gamma}(z)&=\frac{\c{a}(z)}{\c{b}(z)}=\frac{\c{b}_0e^{+j\beta z}}{\c{a}_0e^{-j\beta z}}=\c{\Gamma}_0e^{+j2\beta z}\\
+	\end{align*}
+	$U(z)$ und $I(z)$ können so berechnet werden wie an einem Tor eines Zweitores. Dafür Ausdruck so umformen, dass Abhängigkeit nur noch von $\c{a}$
+	\begin{equation*}
+		\c{a}(z)=\frac{\c{U}(z)}{\sqrt{Z_\text{L}}}=\pm \sqrt{Z_\text{L}}\c{I}(z)
+	\end{equation*}
 \section{Zweitore}
 \subsection{Wellengrößen}
 	\includegraphics[width=0.5\linewidth]{img/zweitore}
@@ -320,7 +332,7 @@ Reflexionsfaktoren
 	\end{equation*}
 Transmissionsfaktoren
 	\begin{equation*}
-		\c{S}_{ji}=\frac{2U_j}{U_{0i}}\sqrt{\frac{Z_{\text{L}i}}{Z_{\text{L}j}}}
+		\c{S}_{ji}=\frac{2U_j}{U_{0i}}\sqrt{\frac{Z_{\text{L}i}}{Z_{\text{L}j}}} \qquad \mbox{Statt Spannungsverhältnis Widerstandsverhältnis einsetzen}
 	\end{equation*}
 \section{Smith-Diagramme}
 \subsection{Ablesen und Antragen der Werte}
