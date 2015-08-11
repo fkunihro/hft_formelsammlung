@@ -168,7 +168,7 @@ Poynting-Vektor; Wirkleistung
 	
 	Kritische Frequenzen ($a>b$)
 	\begin{equation*}
-		f_{c,m,n} = \frac{c}{2}\cdot\sqrt{\left(\frac{m}{a}\right)^2+\left(\frac{n}{b}\right)^2}	
+		f_{c,m,n} = \frac{c}{2}\cdot\sqrt{\left(\frac{m}{a}\right)^2+\left(\frac{n}{b}\right)^2}	\qquad f_c=\frac{\beta_c}{2\pi\sqrt{\varepsilon\mu}}=\frac{f_{c0}}{\sqrt{\varepsilon_r\mu_r}} \qquad \beta^2_c=\beta^2_0-\beta
 	\end{equation*}
 \subsection*{Zweileitersysteme}
 Gruppen- und Phasengeschwindigkeit
@@ -244,12 +244,16 @@ Fußpunktimpedanz und Strahlungswiderstand
 \subsection{Abstandsabhängige komplexe Wellenamplituden}
 	\includegraphics[width=0.5\linewidth]{img/wellenleiter}
 	\begin{align*}
-		\c{a}(z)&=\c{a}_0(z)e^{-j\beta z} & \c{\Gamma}_0&=\frac{\c{b}_0}{\c{a}_0}\\ 
+		\c{a}(z)&=\c{a}_0(z)e^{-j\beta z} & \c{\Gamma}_0&=\frac{\c{b}_0}{\c{a}_0}=\frac{Z-Z_\text{L}}{Z+Z_\text{L}}=\c{\Gamma}(z=0)\\
 		\c{b}(z)&=\c{b}_0(z)e^{+j\beta z} & \c{\Gamma}(z)&=\frac{\c{a}(z)}{\c{b}(z)}=\frac{\c{b}_0e^{+j\beta z}}{\c{a}_0e^{-j\beta z}}=\c{\Gamma}_0e^{+j2\beta z}\\
 	\end{align*}
+	Wenn $z=0$ am Anfang des Leiters muss die Phase von $\c{\Gamma}_0$ zurückgedreht werden. Es gilt (Bsp.):
+	\begin{equation*}
+		\c{\Gamma}_0=\frac{Z-Z_\text{L}}{Z+Z_\text{L}}e^{-j2\beta l}
+	\end{equation*}
 	$U(z)$ und $I(z)$ können so berechnet werden wie an einem Tor eines Zweitores. Dafür Ausdruck so umformen, dass Abhängigkeit nur noch von $\c{a}$
 	\begin{equation*}
-		\c{a}(z)=\frac{\c{U}(z)}{\sqrt{Z_\text{L}}}=\pm \sqrt{Z_\text{L}}\c{I}(z)
+		\c{a}(z)=\frac{\c{U}(z)}{\sqrt{Z_\text{L}}}=\pm \sqrt{Z_\text{L}}\c{I}(z) \qquad \c{c}(z)=\c{a}(z)+\c{b}(z)
 	\end{equation*}
 \section{Zweitore}
 \subsection{Wellengrößen}
