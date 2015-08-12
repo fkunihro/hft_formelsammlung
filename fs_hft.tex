@@ -222,7 +222,7 @@ Strahlungsleistungsdichte (Kugel/Dipol)
 	\end{equation*}
 Richtfaktor
 	\begin{equation*}
-		D=\frac{S_{\text{max}}}{S_0}	=\frac{S_{\text{max}}}{P}\cdot4\pi r \qquad \text{bzw.} \qquad D(\vartheta,\varphi)=\frac{S(\vartheta,\varphi)}{S_0}
+		D=\frac{S_{\text{max}}}{S_0}	=\frac{S_{\text{max}}}{P}\cdot4\pi r^2 \qquad \text{bzw.} \qquad D(\vartheta,\varphi)=\frac{S(\vartheta,\varphi)}{S_0}
 	\end{equation*}
 Gewinn und Zusammenhang mit Wirkfläche für alle Antennen
 	\begin{equation*}
@@ -279,6 +279,9 @@ Streumatrix
 	\begin{equation*}
 		\c{\matr{b}} = \c{\matr{S}}\cdot\c{\matr{a}}
 	\end{equation*}
+	\begin{equation*}
+		\c{\matr{S}}^{\ast\text{T}}\cdot\c{\matr{S}}=\matr{E} \qquad \text{Unitaritätskriterium}
+	\end{equation*}
 Transmissionsmatrix
 	\begin{align*}
 		\begin{pmatrix}
@@ -323,13 +326,28 @@ Kettenmatrix
 			-\c{I}_2
 		\end{pmatrix}
 	\end{equation*}
+Verkettung
+	\begin{equation*}
+		\c{\matr{T}}=\c{\matr{T}}^{(1)}\cdot\c{\matr{T}}^{(2)}
+	\end{equation*}
+	\begin{empheq}[box=\fbox]{equation*}
+		\c{\matr{S}}\neq\c{\matr{S}}^{(1)}\cdot\c{\matr{S}}^{(2)}\textbf{!!!}
+	\end{empheq}
+
 \subsection{Streuparameter}
 	\includegraphics[width=0.5\linewidth]{img/streuparameter}
-
 Reflexions- und Transmissionsfaktoren
 	\begin{equation*}
 		\c{S}_{ii}=\frac{Z_{\text{E}i}-Z_{\text{L}i}}{Z_{\text{E}i}+Z_{\text{L}i}} \qquad \c{S}_{ji}=\frac{2U_j}{U_{0i}}\sqrt{\frac{Z_{\text{L}i}}{Z_{\text{L}j}}} \qquad \parbox{0.4\linewidth}{Statt Spannungsverhältnis Widerstandsverhältnis einsetzen}
 	\end{equation*}
+\subsection{Zusammenhang Impedanz-, Admittanz- und Streumatrix}
+	\begin{align*}
+		\c{\matr{S}}&=\matr{E}-2R_\text{N}(\c{\matr{Z}}+R_\text{N}\matr{E})^{-1}\\
+		&=-\matr{E}+2(R_\text{N}\c{\matr{Y}}+\matr{E})^{-1}\\
+		\c{\matr{Z}}&=-R_\text{N}(\matr{E}+2(\c{\matr{S}-\matr{E}})^{-1})\\
+		\c{\matr{Y}}&=-\frac{1}{R_\text{N}}(\matr{E}-2(\c{\matr{S}}+\matr{E})^{-1})
+	\end{align*}
+
 \section{Smith-Diagramme}
 \subsection{Ablesen und Antragen der Werte}
 	\includegraphics[width=0.45\linewidth]{img/rzsm}
