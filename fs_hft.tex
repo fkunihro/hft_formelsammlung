@@ -141,7 +141,7 @@ Poynting-Vektor; Wirkleistung
 		\end{equation*}
 	\item Winkel der maximalen und Minimalen Amplituden
 		\begin{equation*}
-			\tan(\alpha)=\frac{E_{0\text{y}}\left(t_{^\text{max}_\text{min}}\right)}{E_{0\text{x}}\left(t_{^\text{max}_\text{min}}\right)}=\frac{C\cos\left(\omega t_{^\text{max}_\text{min}}\right)-D\sin\left(\omega t_{^\text{max}_\text{min}}\right)}{A\cos\left(\omega t_{^\text{max}_\text{min}}\right)-B\sin\left(\omega t_{^\text{max}_\text{min}}\right)}
+			\tan(\alpha)=\frac{E_{0\text{y}}\left(t_{\text{max}}\right)}{E_{0\text{x}}\left(t_{\text{max}}\right)}=\frac{C\cos\left(\omega t_{\text{max}}\right)-D\sin\left(\omega t_{\text{max}}\right)}{A\cos\left(\omega t_{\text{max}}\right)-B\sin\left(\omega t_{\text{max}}\right)}
 		\end{equation*}
 	\item Ellipse zeichnen
 
@@ -203,18 +203,18 @@ Wellenwiderstand
 \subsection*{Feldwellenwiderstand}
 TE-Wellen
 	\begin{align*}
-		Z_{FH} &= \pm\frac{\vc{E}_x}{\vc{H}_y} = \mp\frac{\vc{E}_y}{\vc{H}_x}\\
-		&= \frac{\omega\mu}{\beta} = \frac{\omega\mu}{\beta_0\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}} = \frac{Z_F}{\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}} = \frac{Z_F}{\sqrt{1-\left(\frac{f_c}{f_0}\right)^2}} = \frac{Z_F}{\sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2}}
+		Z_\text{FH} &= \pm\frac{\vc{E}_x}{\vc{H}_y} = \mp\frac{\vc{E}_y}{\vc{H}_x}\\
+		&= \frac{\omega\mu}{\beta} = \frac{\omega\mu}{\beta_0\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}} = \frac{Z_\text{F}}{\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}} = \frac{Z_\text{F}}{\sqrt{1-\left(\frac{f_c}{f_0}\right)^2}} = \frac{Z_\text{F}}{\sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2}}
 	\end{align*}
 TM-Wellen
 	\begin{align*}
-		Z_{FE} &= \pm\frac{\vc{E}_x}{\vc{H}_y} = \mp\frac{\vc{E}_y}{\vc{H}_x} = \frac{\beta}{\omega\varepsilon} = \frac{\beta_0\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}}{\omega\varepsilon} \\
-		&= Z_F \sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2} = Z_F \sqrt{1-\left(\frac{f_c}{f_0}\right)^2} = Z_F \sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2}
+		Z_\text{FE} &= \pm\frac{\vc{E}_x}{\vc{H}_y} = \mp\frac{\vc{E}_y}{\vc{H}_x} = \frac{\beta}{\omega\varepsilon} = \frac{\beta_0\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}}{\omega\varepsilon} \\
+		&= Z_\text{F} \sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2} = Z_\text{F} \sqrt{1-\left(\frac{f_c}{f_0}\right)^2} = Z_\text{F} \sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2}
 	\end{align*}
 TEM-Wellen
 	\begin{align*}
 		\frac{\vc{E}_x}{\vc{H}_y} &= -\frac{\vc{E}_y}{\vc{H}_x} = \pm\frac{\omega\mu}{\beta} = \pm\sqrt{\frac{\mu}{\varepsilon}} = \pm Z_F \\
-		Z_{F0} &= \sqrt{\frac{\mu_0}{\varepsilon_0}} = 120\pi\Omega = 377\Omega
+		Z_{\text{F}0} &= \sqrt{\frac{\mu_0}{\varepsilon_0}} = 120\pi\Omega = 377\Omega
 	\end{align*}
 \HL
 \section{Antennentheorie}
@@ -230,7 +230,7 @@ Feldstärken
 \subsection{Kenngrößen von Antennen}
 Strahlungsleistungsdichte (Kugel/Dipol)
 	\begin{equation*}
-		S_0=\frac{P}{4\pi r^2} \qquad S(\vartheta,\varphi)=\frac{1}{2}Z_F\left(\frac{\beta|\c{I}_0|l\sin(\vartheta)}{4\pi r}\right)^2	
+		S_0=\frac{P}{4\pi r^2} \qquad S(\vartheta,\varphi)=\frac{1}{2}Z_\text{F}\left(\frac{\beta|\c{I}_0|l\sin(\vartheta)}{4\pi r}\right)^2	
 	\end{equation*}
 Richtfaktor
 	\begin{equation*}
@@ -257,16 +257,16 @@ Fußpunktimpedanz und Strahlungswiderstand
 \subsection{Abstandsabhängige komplexe Wellenamplituden}
 	\includegraphics[width=0.5\linewidth]{img/wellenleiter}
 	\begin{align*}
-		\c{a}(z)&=\c{a}_0(z)e^{-\j\beta z} & \c{\Gamma}_0&=\frac{\c{b}_0}{\c{a}_0}=\frac{Z-Z_\text{L}}{Z+Z_\text{L}}=\c{\Gamma}(z=0)\\
+		\c{a}(z)&=\c{a}_0(z)e^{-\j\beta z} & \c{\Gamma}_0&=\frac{\c{b}_0}{\c{a}_0}=\frac{\c{Z}-\c{Z}_\text{L}}{\c{Z}+\c{Z}_\text{L}}=\c{\Gamma}(z=0)\\
 		\c{b}(z)&=\c{b}_0(z)e^{+\j\beta z} & \c{\Gamma}(z)&=\frac{\c{a}(z)}{\c{b}(z)}=\frac{\c{b}_0e^{+\j\beta z}}{\c{a}_0e^{-\j\beta z}}=\c{\Gamma}_0e^{+\j2\beta z}\\
 	\end{align*}
 	Wenn $z=0$ am Anfang des Leiters muss die Phase von $\c{\Gamma}_0$ zurückgedreht werden. Es gilt (Bsp.):
 	\begin{equation*}
-		\c{\Gamma}_0=\frac{Z-Z_\text{L}}{Z+Z_\text{L}}e^{-\j2\beta l}
+		\c{\Gamma}_0=\frac{\c{Z}-\c{Z}_\text{L}}{\c{Z}+\c{Z}_\text{L}}e^{-\j2\beta l}
 	\end{equation*}
 	$U(z)$ und $I(z)$ können so berechnet werden wie an einem Tor eines Zweitores. Dafür Ausdruck so umformen, dass Abhängigkeit nur noch von $\c{a}$
 	\begin{equation*}
-		\c{a}(z)=\frac{\c{U}(z)}{\sqrt{Z_\text{L}}}=\pm \sqrt{Z_\text{L}}\c{I}(z) \qquad \c{c}(z)=\c{a}(z)+\c{b}(z)
+		\c{a}(z)=\frac{\c{U}(z)}{\sqrt{\c{Z}_\text{L}}}=\pm \sqrt{\c{Z}_\text{L}}\c{I}(z) \qquad \c{c}(z)=\c{a}(z)+\c{b}(z)
 	\end{equation*}
 \HL
 \section{Zweitore}
@@ -276,17 +276,17 @@ Fußpunktimpedanz und Strahlungswiderstand
 	
 Komplexe Wellenamplituden
 	\begin{align*}
-		a_i&=\frac{U_{\text{h}i}}{\sqrt{Z_{\text{L}_i}}} \qquad \text{(hinlaufenden normierte Spannungswelle an Tor $i$)}\\
-		b_i&=\frac{U_{\text{r}i}}{\sqrt{Z_{\text{L}i}}} \qquad \text{(rücklaufende normierte Spannungswelle an Tor $i$)}
+		\c{a}_i&=\frac{\c{U}_{\text{h}i}}{\sqrt{\c{Z}_{\text{L}_i}}} \qquad \text{(hinlaufenden normierte Spannungswelle an Tor $i$)}\\
+		\c{b}_i&=\frac{\c{U}_{\text{r}i}}{\sqrt{\c{Z}_{\text{L}i}}} \qquad \text{(rücklaufende normierte Spannungswelle an Tor $i$)}
 	\end{align*}
 Spannung und Strom an Tor $i$
 	\begin{align*}
-		U_i&=(a_i+b_i)\sqrt{Z_{\text{L}i}} & a_i&=\frac{U_i+Z_{\text{L}i}I_i}{2\sqrt{Z_{\text{L}i}}} \\
-		I_i&=\frac{a_i-b_i}{\sqrt{Z_{\text{L}i}}} & b_i&=\frac{U_i-Z_{\text{L}i}I_i}{2\sqrt{Z_{\text{L}i}}}
+		\c{U}_i&=(\c{a}_i+\c{b}_i)\sqrt{\c{Z}_{\text{L}i}} & \c{a}_i&=\frac{\c{U}_i+\c{Z}_{\text{L}i}\c{I}_i}{2\sqrt{\c{Z}_{\text{L}i}}} \\
+		\c{I}_i&=\frac{\c{a}_i-\c{b}_i}{\sqrt{\c{Z}_{\text{L}i}}} & \c{b}_i&=\frac{\c{U}_i-\c{Z}_{\text{L}i}I_i}{2\sqrt{\c{Z}_{\text{L}i}}}
 	\end{align*}
 Wirkleistung
 	\begin{equation*}
-		P_{wai}=\frac{1}{2}a_ia_i^*=\frac{U_{\text{h}i}U_{\text{h}i}^*}{2Z_{\text{L}i}}=\frac{1}{2}|a_i|^2 \qquad P_{wbi}=\frac{1}{2}b_ib_i^*=\frac{U_{\text{r}i}U_{\text{r}i}^*}{2Z_{\text{L}i}}=\frac{1}{2}|b_i|^2
+		P_{wai}=\frac{1}{2}\c{a}_i\c{a}_i^*=\frac{\c{U}_{\text{h}i}\c{U}_{\text{h}i}^*}{2\c{Z}_{\text{L}i}}=\frac{1}{2}|\c{a}_i|^2 \qquad P_{wbi}=\frac{1}{2}\c{b}_i\c{b}_i^*=\frac{\c{U}_{\text{r}i}\c{U}_{\text{r}i}^*}{2\c{Z}_{\text{L}i}}=\frac{1}{2}|\c{b}_i|^2
 	\end{equation*}
 \subsection{Matrizen}
 Streumatrix
@@ -350,9 +350,24 @@ Verkettung
 
 \subsection{Streuparameter}
 	\includegraphics[width=0.5\linewidth]{img/streuparameter}
+
 Reflexions- und Transmissionsfaktoren
 	\begin{equation*}
-		\c{S}_{ii}=\frac{Z_{\text{E}i}-Z_{\text{L}i}}{Z_{\text{E}i}+Z_{\text{L}i}} \qquad \c{S}_{ji}=\frac{2U_j}{U_{0i}}\sqrt{\frac{Z_{\text{L}i}}{Z_{\text{L}j}}} \qquad \parbox{0.4\linewidth}{Statt Spannungsverhältnis Widerstandsverhältnis einsetzen}
+		\c{S}_{ii}=\frac{\c{Z}_{\text{E}i}-\c{Z}_{\text{L}i}}{\c{Z}_{\text{E}i}+\c{Z}_{\text{L}i}} \qquad \c{S}_{ji}=\frac{2\c{U}_j}{\c{U}_{0i}}\sqrt{\frac{\c{Z}_{\text{L}i}}{\c{Z}_{\text{L}j}}} \qquad \parbox{0.4\linewidth}{Statt Spannungsverhältnis Widerstandsverhältnis einsetzen}
+	\end{equation*}
+Serienimpedanz  und Paralleladmittanz
+	\begin{equation*}
+		\c{\matr{S}}_{^{-}}=\frac{1}{\c{Z}+2R_\text{N}}
+		\begin{pmatrix}
+			\c{Z} & 2R_\text{N}\\
+			2R_\text{N} & \c{Z}
+		\end{pmatrix}
+		\qquad
+		\c{\matr{S}}_{||}=\frac{1}{2+\c{Y}R_\text{N}}
+		\begin{pmatrix}
+			-\c{Y}R_\text{N} & 2\\
+			2 & -\c{Y}R_\text{N}
+		\end{pmatrix}
 	\end{equation*}
 \subsection{Zusammenhang Impedanz-, Admittanz- und Streumatrix}
 	\begin{align*}
