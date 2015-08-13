@@ -104,8 +104,8 @@ Poynting-Vektor; Wirkleistung
 \begin{enumerate}
 	\item Realteile der komplexen Amplituden
 		\begin{align*}
-			E_{0\text{x}}&=\Re{\left\{ \c{E}_{0\text{x}}e^{j\omega t}\right\}} = A\cos(\omega t) - B\sin(\omega t) \\
-			E_{0\text{y}}&=\Re{\left\{ \c{E}_{0\text{y}}e^{j\omega t}\right\}} = C\cos(\omega t) - D\sin(\omega t)
+			E_{0\text{x}}&=\Re{\left\{ \c{E}_{0\text{x}}e^{\j\omega t}\right\}} = A\cos(\omega t) - B\sin(\omega t) \\
+			E_{0\text{y}}&=\Re{\left\{ \c{E}_{0\text{y}}e^{\j\omega t}\right\}} = C\cos(\omega t) - D\sin(\omega t)
 		\end{align*}
 	\item Maximalwerte der Komponenten berechnen
 		\begin{align*}
@@ -124,7 +124,7 @@ Poynting-Vektor; Wirkleistung
 		\end{empheq}
 	\item Umformen des hinteren Ausdrucks
 		\begin{align*}
-			A_1\cos(2\omega t)-A_2\sin(2\omega t)&=\Re\left\{(A_1+jA_2)e^{j2\omega t}\right\}\\
+			A_1\cos(2\omega t)-A_2\sin(2\omega t)&=\Re\left\{(A_1+jA_2)e^{\j2\omega t}\right\}\\
 			&=\sqrt{A_1^2+A_2^2}\cos\left(2\omega t+\arctan\left(\frac{A_2}{A_1}\right)\right)
 		\end{align*}
 	\item maximale und minimale Amplitude
@@ -215,6 +215,15 @@ TEM-Wellen
 	\end{align*}
 	
 \section{Antennentheorie}
+\subsection{Feldgrößen}
+Vektorpotential Fernfeldnäherung
+	\begin{equation*}
+		\vc{A}(\vec{r})=\frac{\mu e^{-\j\beta r}}{4\pi r}\iiint\limits_V\vc{J}e^{\j\beta r' \cos(\xi)}\D V'
+	\end{equation*}
+Feldstärken
+	\begin{equation*}
+		\vc{B}\approx-\j\beta\vec{u}_r\times\vc{A} \qquad \vc{H}\approx-\frac{\j\beta}{\mu}\vec{u}_r\times\vc{A} \qquad \vc{E}\approx\j\omega\times(\vec{u}_r\times\vc{A})
+	\end{equation*}
 \subsection{Kenngrößen von Antennen}
 Strahlungsleistungsdichte (Kugel/Dipol)
 	\begin{equation*}
@@ -244,12 +253,12 @@ Fußpunktimpedanz und Strahlungswiderstand
 \subsection{Abstandsabhängige komplexe Wellenamplituden}
 	\includegraphics[width=0.5\linewidth]{img/wellenleiter}
 	\begin{align*}
-		\c{a}(z)&=\c{a}_0(z)e^{-j\beta z} & \c{\Gamma}_0&=\frac{\c{b}_0}{\c{a}_0}=\frac{Z-Z_\text{L}}{Z+Z_\text{L}}=\c{\Gamma}(z=0)\\
-		\c{b}(z)&=\c{b}_0(z)e^{+j\beta z} & \c{\Gamma}(z)&=\frac{\c{a}(z)}{\c{b}(z)}=\frac{\c{b}_0e^{+j\beta z}}{\c{a}_0e^{-j\beta z}}=\c{\Gamma}_0e^{+j2\beta z}\\
+		\c{a}(z)&=\c{a}_0(z)e^{-\j\beta z} & \c{\Gamma}_0&=\frac{\c{b}_0}{\c{a}_0}=\frac{Z-Z_\text{L}}{Z+Z_\text{L}}=\c{\Gamma}(z=0)\\
+		\c{b}(z)&=\c{b}_0(z)e^{+\j\beta z} & \c{\Gamma}(z)&=\frac{\c{a}(z)}{\c{b}(z)}=\frac{\c{b}_0e^{+\j\beta z}}{\c{a}_0e^{-\j\beta z}}=\c{\Gamma}_0e^{+\j2\beta z}\\
 	\end{align*}
 	Wenn $z=0$ am Anfang des Leiters muss die Phase von $\c{\Gamma}_0$ zurückgedreht werden. Es gilt (Bsp.):
 	\begin{equation*}
-		\c{\Gamma}_0=\frac{Z-Z_\text{L}}{Z+Z_\text{L}}e^{-j2\beta l}
+		\c{\Gamma}_0=\frac{Z-Z_\text{L}}{Z+Z_\text{L}}e^{-\j2\beta l}
 	\end{equation*}
 	$U(z)$ und $I(z)$ können so berechnet werden wie an einem Tor eines Zweitores. Dafür Ausdruck so umformen, dass Abhängigkeit nur noch von $\c{a}$
 	\begin{equation*}
