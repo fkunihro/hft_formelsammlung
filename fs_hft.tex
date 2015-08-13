@@ -59,9 +59,8 @@
 
 % Command Defs ------------------------------------------------------------------------------------------------
 
-% Command for horizontal separation line
-\newcommand{\EW}{\mathbb{E}}\newcommand{\HL}{\rule{\linewidth}{0.25pt}}
-
+\newcommand{\HL}{\rule{\linewidth}{0.25pt}}		% Command for horizontal separation line
+\newcommand{\EW}{\mathbb{E}}
 \newcommand{\vc}[1]{\vec{\underline{#1}}} 		% <-- Use this shit for komplex vectors: 	example: \vc{H}
 \renewcommand{\c}[1]{\underline{#1}}			% <-- Use this shit für komplexe scalars: 	example: \c{H}_x
 \renewcommand{\j}{{\mathrm j}}					% imaginary unit
@@ -90,7 +89,7 @@ Poynting-Vektor; Wirkleistung
 	\begin{equation*}
 	\vc{S}=\frac{1}{2}\vc{E}\times\vc{H}^*\quad;\quad P=\varoiint\Re\left\lbrace \vc{S} \right\rbrace \D\vec{A} =\frac{1}{2}\varoiint\Re\left\lbrace \vc{E}\times\vc{H}^* \right\rbrace \D\vec{A}
 	\end{equation*}
-	
+\HL
 \section{Polarisation}
 \subsection{Drehsinn und Form}
 \begin{itemize}
@@ -148,8 +147,8 @@ Poynting-Vektor; Wirkleistung
 
 		\includegraphics[width=0.6\linewidth]{img/polarisationsellipse}
 \end{enumerate}
+\HL
 \section{EM-Wellen: allgemeine Zusammenhänge}
-
 \subsection*{Wellenleiter (konstanter Querschnitt)}
 	\begin{equation*}
 		\lambda=\frac{\lambda_0}{\sqrt{1-\left(\frac{\beta_c}{\beta_0 }\right)^2 }}=\frac{\lambda_0}{\sqrt{1-\left(\frac{f_c}{f}\right)^2 }}=\frac{\lambda_0}{\sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2 }}
@@ -217,7 +216,7 @@ TEM-Wellen
 		\frac{\vc{E}_x}{\vc{H}_y} &= -\frac{\vc{E}_y}{\vc{H}_x} = \pm\frac{\omega\mu}{\beta} = \pm\sqrt{\frac{\mu}{\varepsilon}} = \pm Z_F \\
 		Z_{F0} &= \sqrt{\frac{\mu_0}{\varepsilon_0}} = 120\pi\Omega = 377\Omega
 	\end{align*}
-	
+\HL
 \section{Antennentheorie}
 \subsection{Feldgrößen}
 Vektorpotential Fernfeldnäherung
@@ -253,6 +252,7 @@ Fußpunktimpedanz und Strahlungswiderstand
 	\begin{equation*}
 		\c{Z}_\text{A}=\frac{\c{U}_0}{\c{I}_0} \qquad R_\text{S}=\frac{2P}{|\c{I}_0|^2}
 	\end{equation*}
+\HL
 \section{Reflexion}
 \subsection{Abstandsabhängige komplexe Wellenamplituden}
 	\includegraphics[width=0.5\linewidth]{img/wellenleiter}
@@ -268,6 +268,7 @@ Fußpunktimpedanz und Strahlungswiderstand
 	\begin{equation*}
 		\c{a}(z)=\frac{\c{U}(z)}{\sqrt{Z_\text{L}}}=\pm \sqrt{Z_\text{L}}\c{I}(z) \qquad \c{c}(z)=\c{a}(z)+\c{b}(z)
 	\end{equation*}
+\HL
 \section{Zweitore}
 \subsection{Wellengrößen}
 	\includegraphics[width=0.5\linewidth]{img/zweitor1}
@@ -360,7 +361,7 @@ Reflexions- und Transmissionsfaktoren
 		\c{\matr{Z}}&=-R_\text{N}(\matr{E}+2(\c{\matr{S}-\matr{E}})^{-1})\\
 		\c{\matr{Y}}&=-\frac{1}{R_\text{N}}(\matr{E}-2(\c{\matr{S}}+\matr{E})^{-1})
 	\end{align*}
-
+\HL
 \section{Smith-Diagramme}
 \subsection{Ablesen und Antragen der Werte}
 	\includegraphics[width=0.45\linewidth]{img/rzsm}
