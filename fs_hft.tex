@@ -94,11 +94,11 @@ Poynting-Vektor; Wirkleistung
 \section{Polarisation}
 \subsection{Drehsinn und Form}
 \begin{itemize}
-	\item $\SI{0}{\degree}<a_\text{x}-a_\text{y}<\SI{180}{\degree}$ : $E_{0\text{x}}$ eilt $E_{0\text{y}}$ vor, rechtsdrehend
-	\item $\SI{0}{\degree}<a_\text{y}-a_\text{x}<\SI{180}{\degree}$ : $E_{0\text{y}}$ eilt $E_{0\text{x}}$ vor, linksdrehend
-	\item $a_\text{x}-a_\text{y}=\SI{0}{\degree}$ oder $a_\text{x}-a_\text{y}=\SI{180}{\degree}$ : $E_{0\text{x}}$ oder $E_{0\text{y}}$ gleich- oder gegenphasig, linear
-	\item $a_\text{x}-a_\text{y}=\SI{90}{\degree}$ und $|\c{E}_{0\text{x}}|=|\c{E}_{0\text{y}}|$ : rechtsdrehend, zirkular
-	\item $a_\text{y}-a_\text{x}=\SI{90}{\degree}$ und $|\c{E}_{0\text{x}}|=|\c{E}_{0\text{y}}|$ : linksdrehend, zirkular
+	\item $\SI{0}{\degree}<\alpha_\text{x}-\alpha_\text{y}<\SI{180}{\degree}$ : $E_{0\text{x}}$ eilt $E_{0\text{y}}$ vor, rechtsdrehend
+	\item $\SI{0}{\degree}<\alpha_\text{y}-\alpha_\text{x}<\SI{180}{\degree}$ : $E_{0\text{y}}$ eilt $E_{0\text{x}}$ vor, linksdrehend
+	\item $\alpha_\text{x}-\alpha_\text{y}=\SI{0}{\degree}$ oder $\alpha_\text{x}-\alpha_\text{y}=\SI{180}{\degree}$ : $E_{0\text{x}}$ oder $E_{0\text{y}}$ gleich- oder gegenphasig, linear
+	\item $\alpha_\text{x}-\alpha_\text{y}=\SI{90}{\degree}$ und $|\c{E}_{0\text{x}}|=|\c{E}_{0\text{y}}|$ : rechtsdrehend, zirkular
+	\item $\alpha_\text{y}-\alpha_\text{x}=\SI{90}{\degree}$ und $|\c{E}_{0\text{x}}|=|\c{E}_{0\text{y}}|$ : linksdrehend, zirkular
 \end{itemize}
 \subsection{HowTo: zeichnen einer Polarisationsellipse}
 \begin{enumerate}
@@ -113,9 +113,10 @@ Poynting-Vektor; Wirkleistung
 			E_{0\text{y,max}}&=|E_{0\text{y}}|=\sqrt{C^2+D^2}
 		\end{align*}
 	\item Betrag des Ellipsenradius
-		\begin{equation*}
-			\norm{\vec{E}_0}=\sqrt{E^2_{0\text{x}}+E^2_{0\text{y}}}=\sqrt{A_0+A_1\cos(2\omega t)-A_2\sin(2\omega t)}
-		\end{equation*}
+		\begin{align*}
+			&\norm{\vec{E}_0}=\sqrt{E^2_{0\text{x}}+E^2_{0\text{y}}}=\sqrt{A_0+A_1\cos(2\omega t)-A_2\sin(2\omega t)}\\
+			&=\sqrt{\frac{A^2+B^2+C^2+D^2}{2}+\frac{A^2-B^2+C^2-D^2}{2}\cos(2\omega t)-(AB+CD)\sin(2\omega t)}
+		\end{align*}
 		verwendete Additionstheoreme:
 		\begin{empheq}[box=\fbox]{align*}
 			\cos^2(\alpha)&=\frac{1}{2}(1+\cos(2\alpha))\\
@@ -143,6 +144,9 @@ Poynting-Vektor; Wirkleistung
 		\begin{equation*}
 			\tan(\alpha)=\frac{E_{0\text{y}}\left(t_{^\text{max}_\text{min}}\right)}{E_{0\text{x}}\left(t_{^\text{max}_\text{min}}\right)}=\frac{C\cos\left(\omega t_{^\text{max}_\text{min}}\right)-D\sin\left(\omega t_{^\text{max}_\text{min}}\right)}{A\cos\left(\omega t_{^\text{max}_\text{min}}\right)-B\sin\left(\omega t_{^\text{max}_\text{min}}\right)}
 		\end{equation*}
+	\item Ellipse zeichnen
+
+		\includegraphics[width=0.6\linewidth]{img/polarisationsellipse}
 \end{enumerate}
 \section{EM-Wellen: allgemeine Zusammenhänge}
 
