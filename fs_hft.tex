@@ -75,7 +75,8 @@
 	
 %\small
 \begin{multicols}{2}
-\section{Zeitharmonische Maxwell-Gleichungen}
+\section{Grundlagen}
+\subsection{Zeitharmonische Maxwell-Gleichungen}
 für anisotrope, homogene Medien
 	\begin{align*}
 	\nabla\times\vc{H} &= \vc{J} + \j\omega\varepsilon\vc{E} &\iff&& \oint_{\partial A}\vc{H}\cdot\D\vec{s} &= \iint_A\left( \vc{J} + \j\omega\varepsilon\vc{E}\right) \cdot\D\vec{A}\\
@@ -85,10 +86,15 @@ für anisotrope, homogene Medien
 	\end{align*}
 für Freiraumausbreitung und allgemein Vakuum: $\c{\rho}_e=\c{\rho}_m=0$ und $\vc{J}=\vc{M}=\vec{0}$
 
-Poynting-Vektor; Wirkleistung
+\subsection{Poynting-Vektor; Wirkleistung}
 	\begin{equation*}
 	\vc{S}=\frac{1}{2}\vc{E}\times\vc{H}^*\quad;\quad P=\varoiint\Re\left\lbrace \vc{S} \right\rbrace \D\vec{A} =\frac{1}{2}\varoiint\Re\left\lbrace \vc{E}\times\vc{H}^* \right\rbrace \D\vec{A}
 	\end{equation*}
+\subsection{Berechnung der Transversal- aus den Longitudinalkomponenten}
+	\begin{align*}
+		\c{E}_\text{x}\beta_\text{c}^2&=\mp\j\beta\frac{\partial\c{E}_\text{z}}{\partial x}-\j\omega\mu\frac{\partial\c{H}_\text{z}}{\partial y} & \c{E}_\text{y}\beta_\text{c}^2&=\mp\j\beta\frac{\partial\c{E}_\text{z}}{\partial y}+\j\omega\mu\frac{\partial\c{H}_\text{z}}{\partial x}\\
+		\c{H}_\text{x}\beta_\text{c}^2&=\mp\j\beta\frac{\partial\c{H}_\text{z}}{\partial x}+\j\omega\varepsilon\frac{\partial\c{E}_\text{z}}{\partial y} & \c{H}_\text{y}\beta_\text{c}^2&=\mp\j\beta\frac{\partial\c{H}_\text{z}}{\partial y}-\j\omega\varepsilon\frac{\partial\c{E}_\text{z}}{\partial x}
+	\end{align*}
 \HL
 \section{Polarisation}
 \subsection{Drehsinn und Form}
@@ -116,12 +122,6 @@ Poynting-Vektor; Wirkleistung
 			&\norm{\vec{E}_0}=\sqrt{E^2_{0\text{x}}+E^2_{0\text{y}}}=\sqrt{A_0+A_1\cos(2\omega t)-A_2\sin(2\omega t)}\\
 			&=\sqrt{\frac{A^2+B^2+C^2+D^2}{2}+\frac{A^2-B^2+C^2-D^2}{2}\cos(2\omega t)-(AB+CD)\sin(2\omega t)}
 		\end{align*}
-		verwendete Additionstheoreme:
-		\begin{empheq}[box=\fbox]{align*}
-			\cos^2(\alpha)&=\frac{1}{2}(1+\cos(2\alpha))\\
-			\sin^2(\alpha)&=\frac{1}{2}(1-\cos(2\alpha))\\
-			\sin(\alpha)\cos(\beta)&=\frac{1}{2	}(\sin(\alpha-\beta)+\sin(\alpha+\beta))
-		\end{empheq}
 	\item Umformen des hinteren Ausdrucks
 		\begin{align*}
 			A_1\cos(2\omega t)-A_2\sin(2\omega t)&=\Re\left\{(A_1+jA_2)e^{\j2\omega t}\right\}\\
@@ -189,7 +189,7 @@ Wellenwiderstand
 \subsection{Koaxialleitung}
 	Wellenwiderstand und Leistung
 	\begin{equation*}
-		Z_\text{L}=\frac{1}{2\pi}Z_{\text{F}0}\ln\left(\frac{D}{d}\right) \qquad P=\frac{1}{2}Z_\text{L}I^2_{\text{max}}=\frac{1}{2}\frac{U^2_{\text{max}}}{Z_\text{L}}
+		Z_\text{L}=\frac{1}{2\pi}Z_{\text{F}0}\ln\left(\frac{D}{d}\right) \qquad P=\frac{1}{2}Z_\text{L}I^2_{\text{max}}=\frac{1}{2}\frac{U^2_{\text{max}}}{Z_\text{L}}=\frac{1}{2}\int\limits^{2\pi}_0 \int\limits^D_d \frac{E(r)^2}{Z_\text{F}}\D A
 	\end{equation*}
 	Feldstärken
 	\begin{equation*}
@@ -212,10 +212,9 @@ TM-Wellen
 		&= Z_\text{F} \sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2} = Z_\text{F} \sqrt{1-\left(\frac{f_c}{f_0}\right)^2} = Z_\text{F} \sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2}
 	\end{align*}
 TEM-Wellen
-	\begin{align*}
-		\frac{\vc{E}_x}{\vc{H}_y} &= -\frac{\vc{E}_y}{\vc{H}_x} = \pm\frac{\omega\mu}{\beta} = \pm\sqrt{\frac{\mu}{\varepsilon}} = \pm Z_F \\
-		Z_{\text{F}0} &= \sqrt{\frac{\mu_0}{\varepsilon_0}} = 120\pi\Omega = 377\Omega
-	\end{align*}
+	\begin{equation*}
+		\frac{\vc{E}_x}{\vc{H}_y} = -\frac{\vc{E}_y}{\vc{H}_x} = \pm\frac{\omega\mu}{\beta} = \pm\sqrt{\frac{\mu}{\varepsilon}} = \pm Z_F \qquad Z_{\text{F}0} = \sqrt{\frac{\mu_0}{\varepsilon_0}} = 120\pi\Omega = 377\Omega
+	\end{equation*}
 \HL
 \section{Antennentheorie}
 \subsection{Feldgrößen}
@@ -228,14 +227,18 @@ Feldstärken
 		\vc{B}\approx-\j\beta\vec{u}_r\times\vc{A} \qquad \vc{H}\approx-\frac{\j\beta}{\mu}\vec{u}_r\times\vc{A} \qquad \vc{E}\approx\j\omega\times(\vec{u}_r\times\vc{A})
 	\end{equation*}
 \subsection{Kenngrößen von Antennen}
-Strahlungsleistungsdichte (Kugel/Dipol)
+Strahlungsleistungsdichte (Allgemeine/Kugel/Dipol)
 	\begin{equation*}
-		S_0=\frac{P}{4\pi r^2} \qquad S(\vartheta,\varphi)=\frac{1}{2}Z_\text{F}\left(\frac{\beta|\c{I}_0|l\sin(\vartheta)}{4\pi r}\right)^2	
+		S=\frac{P\cdot G	}{4\pi r^2} \qquad S_0=\frac{P}{4\pi r^2} \qquad S(\vartheta,\varphi)=\frac{1}{2}Z_\text{F}\left(\frac{\beta|\c{I}_0|l\sin(\vartheta)}{4\pi r}\right)^2 \sim \frac{1}{r^2}
 	\end{equation*}
 Richtfaktor
 	\begin{equation*}
 		D=\frac{S_{\text{max}}}{S_0}	=\frac{S_{\text{max}}}{P}\cdot4\pi r^2 \qquad \text{bzw.} \qquad D(\vartheta,\varphi)=\frac{S(\vartheta,\varphi)}{S_0}
 	\end{equation*}
+	\begin{empheq}[box=\fbox]{equation*}
+		D_{Kugel}=\frac{S_0}{S_0}=1	
+	\end{empheq}
+
 Gewinn und Zusammenhang mit Wirkfläche für alle Antennen
 	\begin{equation*}
 		G=\eta D \qquad \frac{A}{G}=\frac{\lambda^2}{4\pi}
@@ -247,6 +250,10 @@ Richcharakteristik
 Abgestrahlte Leistung
 	\begin{equation*}
 		P=\varoiint S\D A = \varoiint S_0DC^2(\vartheta,\varphi)\D A
+	\end{equation*}
+Empfangene Leistung
+	\begin{equation*}
+		P_\text{E}=S\cdot A_\text{E}
 	\end{equation*}
 Fußpunktimpedanz und Strahlungswiderstand
 	\begin{equation*}
@@ -294,7 +301,7 @@ Streumatrix
 		\c{\matr{b}} = \c{\matr{S}}\cdot\c{\matr{a}}
 	\end{equation*}
 	\begin{equation*}
-		\c{\matr{S}}^{\ast\text{T}}\cdot\c{\matr{S}}=\matr{E} \qquad \text{Unitaritätskriterium}
+		\c{\matr{S}}^{\ast\text{T}}\cdot\c{\matr{S}}=\matr{E} \qquad \text{Unitaritätskriterium, Vorraussetzung für Verlustfreiheit}
 	\end{equation*}
 Transmissionsmatrix
 	\begin{align*}
@@ -353,7 +360,7 @@ Verkettung
 
 Reflexions- und Transmissionsfaktoren
 	\begin{equation*}
-		\c{S}_{ii}=\frac{\c{Z}_{\text{E}i}-\c{Z}_{\text{L}i}}{\c{Z}_{\text{E}i}+\c{Z}_{\text{L}i}} \qquad \c{S}_{ji}=\frac{2\c{U}_j}{\c{U}_{0i}}\sqrt{\frac{\c{Z}_{\text{L}i}}{\c{Z}_{\text{L}j}}} \qquad \parbox{0.4\linewidth}{Statt Spannungsverhältnis Widerstandsverhältnis einsetzen}
+		\c{S}_{ii}=\frac{\c{Z}_{\text{E}i}-\c{Z}_{\text{L}i}}{\c{Z}_{\text{E}i}+\c{Z}_{\text{L}i}} \qquad \c{S}_{ji}=2\frac{\c{U}_j}{\c{U}_{0i}}\sqrt{\frac{\c{Z}_{\text{L}i}}{\c{Z}_{\text{L}j}}} \qquad \parbox{0.4\linewidth}{Statt Spannungsverhältnis Widerstandsverhältnis einsetzen (Bei Dreitoren verketteten Spannungsteiler benutzen!)}
 	\end{equation*}
 Serienimpedanz  und Paralleladmittanz
 	\begin{equation*}
@@ -371,10 +378,8 @@ Serienimpedanz  und Paralleladmittanz
 	\end{equation*}
 \subsection{Zusammenhang Impedanz-, Admittanz- und Streumatrix}
 	\begin{align*}
-		\c{\matr{S}}&=\matr{E}-2R_\text{N}(\c{\matr{Z}}+R_\text{N}\matr{E})^{-1}\\
-		&=-\matr{E}+2(R_\text{N}\c{\matr{Y}}+\matr{E})^{-1}\\
-		\c{\matr{Z}}&=-R_\text{N}(\matr{E}+2(\c{\matr{S}-\matr{E}})^{-1})\\
-		\c{\matr{Y}}&=-\frac{1}{R_\text{N}}(\matr{E}-2(\c{\matr{S}}+\matr{E})^{-1})
+		\c{\matr{S}}&=\matr{E}-2R_\text{N}(\c{\matr{Z}}+R_\text{N}\matr{E})^{-1} & \c{\matr{Z}}&=-R_\text{N}(\matr{E}+2(\c{\matr{S}}-\matr{E})^{-1})\\
+		&=-\matr{E}+2(R_\text{N}\c{\matr{Y}}+\matr{E})^{-1} & \c{\matr{Y}}&=-\frac{1}{R_\text{N}}(\matr{E}-2(\c{\matr{S}}+\matr{E})^{-1})
 	\end{align*}
 \HL
 \section{Smith-Diagramme}
@@ -384,6 +389,43 @@ Serienimpedanz  und Paralleladmittanz
 	\begin{equation*}
 		|\c{\Gamma}|=r=\frac{\c{Z}-\c{Z_L}}{\c{Z}+\c{Z}_L}=\frac{\c{z}-1}{\c{z}+1}=\frac{s-1}{s+1}=\frac{1-m}{1+m}\qquad s=\frac{1}{m}=\frac{1+|r|}{1-|r|}
 	\end{equation*}
+\HL
+\section{Allgemeines}
+	\begin{equation*}
+		\si{\decibel}=10\log(\dots) \qquad \si{\decibel}_\text{m}=10\log\left(\frac{P}{\SI{1}{\milli\watt}}\right)
+	\end{equation*}
+\subsection{Additionstheoreme}
+		\begin{align*}
+			\cos^2(\alpha)&=\frac{1}{2}(1+\cos(2\alpha))\\
+			\sin^2(\alpha)&=\frac{1}{2}(1-\cos(2\alpha))\\
+			\sin(\alpha)\cos(\beta)&=\frac{1}{2	}(\sin(\alpha-\beta)+\sin(\alpha+\beta))
+		\end{align*}
+\subsection{SI-Präfixe}
+\begin{tabular}{|l|l|l||l|l|l|}
+\hline
+\textbf{Präfix} & \textbf{Zeichen} & \textbf{Faktor} & \textbf{Präfix} & \textbf{Zeichen} & \textbf{Faktor}\\
+\hline\hline
+Yocto  & y  & 10$^{–24}$ & Deka   & da & 10$^{1}$\\
+\hline
+Zepto  & z  & 10$^{–21}$ & Hekto  & h  & 10$^{2}$\\
+\hline
+Atto   & a  & 10$^{–18}$ & Kilo   & k  & 10$^{3}$\\
+\hline
+Femto  & f  & 10$^{–15}$ & Mega   & M  & 10$^{6}$\\
+\hline
+Piko   & p  & 10$^{–12}$ & Giga   & G  & 10$^{9}$\\
+\hline
+Nano   & n  & 10$^{–9}$ & Tera   & T  & 10$^{12}$\\
+\hline
+Mikro  & $\mu$ & 10$^{–6}$ & Peta   & P  & 10$^{15}$\\
+\hline
+Milli  & m  & 10$^{–3}$ & Exa    & E  & 10$^{18}$\\
+\hline
+Zenti  & c  & 10$^{–2}$ & Zetta  & Z  & 10$^{21}$\\
+\hline
+Dezi   & d  & 10$^{–1}$ & Yotta  & Y  & 10$^{24}$\\
+\hline\hline
+\end{tabular}
 \end{multicols}	
 
 \end{document}
