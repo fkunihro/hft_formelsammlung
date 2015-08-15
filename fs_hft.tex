@@ -264,16 +264,16 @@ Fußpunktimpedanz und Strahlungswiderstand
 \subsection{Abstandsabhängige komplexe Wellenamplituden}
 	\includegraphics[width=0.5\linewidth]{img/wellenleiter}
 	\begin{align*}
-		\c{a}(z)&=\c{a}_0(z)e^{-\j\beta z} & \c{\Gamma}_0&=\frac{\c{b}_0}{\c{a}_0}=\frac{\c{Z}-\c{Z}_\text{L}}{\c{Z}+\c{Z}_\text{L}}=\c{\Gamma}(z=0)\\
+		\c{a}(z)&=\c{a}_0(z)e^{-\j\beta z} & \c{\Gamma}_0&=\frac{\c{b}_0}{\c{a}_0}=\frac{\c{Z}-Z_\text{L}}{\c{Z}+Z_\text{L}}=\c{\Gamma}(z=0)\\
 		\c{b}(z)&=\c{b}_0(z)e^{+\j\beta z} & \c{\Gamma}(z)&=\frac{\c{b}(z)}{\c{a}(z)}=\frac{\c{b}_0e^{+\j\beta z}}{\c{a}_0e^{-\j\beta z}}=\c{\Gamma}_0e^{+\j2\beta z}\\
 	\end{align*}
 	Wenn $z=0$ am Anfang des Leiters muss die Phase von $\c{\Gamma}_0$ zurückgedreht werden. Es gilt (Bsp.):
 	\begin{equation*}
-		\c{\Gamma}_0=\frac{\c{Z}-\c{Z}_\text{L}}{\c{Z}+\c{Z}_\text{L}}e^{-\j2\beta l}
+		\c{\Gamma}_0=\frac{\c{Z}-Z_\text{L}}{\c{Z}+Z_\text{L}}e^{-\j2\beta l}
 	\end{equation*}
 	$U(z)$ und $I(z)$ können so berechnet werden wie an einem Tor eines Zweitores. Dafür Ausdruck so umformen, dass Abhängigkeit nur noch von $\c{a}$
 	\begin{equation*}
-		\c{a}(z)=\frac{\c{U}(z)}{\sqrt{\c{Z}_\text{L}}}=\pm \sqrt{\c{Z}_\text{L}}\c{I}(z) \qquad \c{c}(z)=\c{a}(z)+\c{b}(z)
+		\c{a}(z)=\frac{\c{U}(z)}{\sqrt{Z_\text{L}}}=\pm \sqrt{Z_\text{L}}\c{I}(z) \qquad \c{c}(z)=\c{a}(z)+\c{b}(z)
 	\end{equation*}
 \HL
 \section{Zweitore}
@@ -284,16 +284,16 @@ Fußpunktimpedanz und Strahlungswiderstand
 Komplexe Wellenamplituden
 	\begin{align*}
 		\c{a}_i&=\frac{\c{U}_{\text{h}i}}{\sqrt{\c{Z}_{\text{L}_i}}} \qquad \text{(hinlaufenden normierte Spannungswelle an Tor $i$)}\\
-		\c{b}_i&=\frac{\c{U}_{\text{r}i}}{\sqrt{\c{Z}_{\text{L}i}}} \qquad \text{(rücklaufende normierte Spannungswelle an Tor $i$)}
+		\c{b}_i&=\frac{\c{U}_{\text{r}i}}{\sqrt{Z_{\text{L}i}}} \qquad \text{(rücklaufende normierte Spannungswelle an Tor $i$)}
 	\end{align*}
 Spannung und Strom an Tor $i$
 	\begin{align*}
-		\c{U}_i&=(\c{a}_i+\c{b}_i)\sqrt{\c{Z}_{\text{L}i}} & \c{a}_i&=\frac{\c{U}_i+\c{Z}_{\text{L}i}\c{I}_i}{2\sqrt{\c{Z}_{\text{L}i}}} \\
-		\c{I}_i&=\frac{\c{a}_i-\c{b}_i}{\sqrt{\c{Z}_{\text{L}i}}} & \c{b}_i&=\frac{\c{U}_i-\c{Z}_{\text{L}i}I_i}{2\sqrt{\c{Z}_{\text{L}i}}}
+		\c{U}_i&=(\c{a}_i+\c{b}_i)\sqrt{Z_{\text{L}i}} & \c{a}_i&=\frac{\c{U}_i+Z_{\text{L}i}\c{I}_i}{2\sqrt{Z_{\text{L}i}}} \\
+		\c{I}_i&=\frac{\c{a}_i-\c{b}_i}{\sqrt{Z_{\text{L}i}}} & \c{b}_i&=\frac{\c{U}_i-Z_{\text{L}i}I_i}{2\sqrt{Z_{\text{L}i}}}
 	\end{align*}
 Wirkleistung
 	\begin{equation*}
-		P_{\text{w}ai}=\frac{1}{2}\c{a}_i\c{a}_i^*=\frac{\c{U}_{\text{h}i}\c{U}_{\text{h}i}^*}{2\c{Z}_{\text{L}i}}=\frac{1}{2}|\c{a}_i|^2 \qquad P_{\text{w}bi}=\frac{1}{2}\c{b}_i\c{b}_i^*=\frac{\c{U}_{\text{r}i}\c{U}_{\text{r}i}^*}{2\c{Z}_{\text{L}i}}=\frac{1}{2}|\c{b}_i|^2
+		P_{\text{w}ai}=\frac{1}{2}\c{a}_i\c{a}_i^*=\frac{\c{U}_{\text{h}i}\c{U}_{\text{h}i}^*}{2Z_{\text{L}i}}=\frac{1}{2}|\c{a}_i|^2 \qquad P_{\text{w}bi}=\frac{1}{2}\c{b}_i\c{b}_i^*=\frac{\c{U}_{\text{r}i}\c{U}_{\text{r}i}^*}{2Z_{\text{L}i}}=\frac{1}{2}|\c{b}_i|^2
 	\end{equation*}
 \subsection{Matrizen}
 Streumatrix
@@ -357,29 +357,35 @@ Verkettung
 
 \subsection{Streuparameter}
 	\includegraphics[width=0.5\linewidth]{img/streuparameter}
+	\mbox{(Oft statt $Z_\text{L}$ auch $R_\text{N}$)}
 
 Reflexions- und Transmissionsfaktoren
 	\begin{equation*}
-		\c{S}_{ii}=\frac{\c{Z}_{\text{E}i}-\c{Z}_{\text{L}i}}{\c{Z}_{\text{E}i}+\c{Z}_{\text{L}i}} \qquad \c{S}_{ji}=2\frac{\c{U}_j}{\c{U}_{0i}}\sqrt{\frac{\c{Z}_{\text{L}i}}{\c{Z}_{\text{L}j}}} \qquad \parbox{0.4\linewidth}{Statt Einzelspannungen Spannungsteiler einsetzen. Auf Parallelschaltungen Achten)}
+		\c{S}_{ii}=\frac{\c{Z}_{\text{E}i}-Z_{\text{L}i}}{\c{Z}_{\text{E}i}+Z_{\text{L}i}} \qquad \c{S}_{ji}=2\frac{\c{U}_j}{\c{U}_{0i}}\sqrt{\frac{Z_{\text{L}i}}{Z_{\text{L}j}}} \qquad \parbox{0.4\linewidth}{Statt Einzelspannungen Spannungsteiler einsetzen. Auf Parallelschaltungen Achten}
 	\end{equation*}
-Serienimpedanz  und Paralleladmittanz
-	\begin{equation*}
-		\c{\matr{S}}_{^{-}}=\frac{1}{\c{Z}+2R_\text{N}}
+Serienimpedanz, Paralleladmittanz und Parallelimpedanz
+	\begin{align*}
+		\c{\matr{S}}_{^{-}}&=\frac{1}{\c{Z}+2Z_\text{L}}
 		\begin{pmatrix}
-			\c{Z} & 2R_\text{N}\\
-			2R_\text{N} & \c{Z}
+			\c{Z} & 2Z_\text{L}\\
+			2Z_\text{L} & \c{Z}
 		\end{pmatrix}
-		\qquad
-		\c{\matr{S}}_{||}=\frac{1}{2+\c{Y}R_\text{N}}
+		&
+		\c{\matr{S}}_{||}&=\frac{1}{2+\c{Y}Z_\text{L}}
 		\begin{pmatrix}
-			-\c{Y}R_\text{N} & 2\\
-			2 & -\c{Y}R_\text{N}
-		\end{pmatrix}
-	\end{equation*}
+			-\c{Y}Z_\text{L} & 2\\
+			2 & -\c{Y}Z_\text{L}
+		\end{pmatrix}\\
+		& & &=\frac{1}{2\c{Z}+Z_\text{L}}
+		\begin{pmatrix}
+			-Z_\text{L} & 2\c{Z}\\
+			2\c{Z} & -Z_\text{L}
+		\end{pmatrix}\\
+	\end{align*}
 \subsection{Zusammenhang Impedanz-, Admittanz- und Streumatrix}
 	\begin{align*}
-		\c{\matr{S}}&=\matr{E}-2R_\text{N}(\c{\matr{Z}}+R_\text{N}\matr{E})^{-1} & \c{\matr{Z}}&=-R_\text{N}(\matr{E}+2(\c{\matr{S}}-\matr{E})^{-1})\\
-		&=-\matr{E}+2(R_\text{N}\c{\matr{Y}}+\matr{E})^{-1} & \c{\matr{Y}}&=-\frac{1}{R_\text{N}}(\matr{E}-2(\c{\matr{S}}+\matr{E})^{-1})
+		\c{\matr{S}}&=\matr{E}-2Z_\text{L}(\c{\matr{Z}}+Z_\text{L}\matr{E})^{-1} & \c{\matr{Z}}&=-Z_\text{L}(\matr{E}+2(\c{\matr{S}}-\matr{E})^{-1})\\
+		&=-\matr{E}+2(Z_\text{L}\c{\matr{Y}}+\matr{E})^{-1} & \c{\matr{Y}}&=-\frac{1}{Z_\text{L}}(\matr{E}-2(\c{\matr{S}}+\matr{E})^{-1})
 	\end{align*}
 \HL
 \section{Smith-Diagramme}
@@ -387,7 +393,7 @@ Serienimpedanz  und Paralleladmittanz
 	\includegraphics[width=0.45\linewidth]{img/rzsm}
 	\includegraphics[width=0.45\linewidth]{img/bauelemente}
 	\begin{equation*}
-		|\c{\Gamma}|=r=\frac{\c{Z}-\c{Z_L}}{\c{Z}+\c{Z}_L}=\frac{\c{z}-1}{\c{z}+1}=\frac{s-1}{s+1}=\frac{1-m}{1+m}\qquad s=\frac{1}{m}=\frac{1+|r|}{1-|r|}
+		|\c{\Gamma}|=r=\frac{\c{Z}-Z_\text{L}}{\c{Z}+Z_\text{L}}=\frac{\c{z}-1}{\c{z}+1}=\frac{s-1}{s+1}=\frac{1-m}{1+m}\qquad s=\frac{1}{m}=\frac{1+|r|}{1-|r|}
 	\end{equation*}
 \HL
 \section{Allgemeines}
