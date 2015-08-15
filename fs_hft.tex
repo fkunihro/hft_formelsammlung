@@ -151,17 +151,17 @@ für Freiraumausbreitung und allgemein Vakuum: $\c{\rho}_e=\c{\rho}_m=0$ und $\v
 \section{EM-Wellen: allgemeine Zusammenhänge}
 \subsection*{Wellenleiter (konstanter Querschnitt)}
 	\begin{equation*}
-		\lambda=\frac{\lambda_0}{\sqrt{1-\left(\frac{\beta_c}{\beta_0 }\right)^2 }}=\frac{\lambda_0}{\sqrt{1-\left(\frac{f_c}{f}\right)^2 }}=\frac{\lambda_0}{\sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2 }}
+		\lambda=\frac{\lambda_0}{\sqrt{1-\left(\frac{\beta_\text{c}}{\beta_0 }\right)^2 }}=\frac{\lambda_0}{\sqrt{1-\left(\frac{f_\text{c}}{f}\right)^2 }}=\frac{\lambda_0}{\sqrt{1-\left(\frac{\lambda_0}{\lambda_\text{c}}\right)^2 }}
 	\end{equation*}
 	
 	Phasengeschwindigkeit
 	\begin{equation*}
-		v_{\text{p}}=\frac{c}{\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}}=\frac{c}{\sqrt{1-\left(\frac{f_c}{f}\right)^2}}=\frac{c}{\sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2}}
+		v_{\text{p}}=\frac{c}{\sqrt{1-\left(\frac{\beta_\text{c}}{\beta_0}\right)^2}}=\frac{c}{\sqrt{1-\left(\frac{f_\text{c}}{f}\right)^2}}=\frac{c}{\sqrt{1-\left(\frac{\lambda_0}{\lambda_\text{c}}\right)^2}}
 	\end{equation*}
 	
 	Gruppengeschwindigkeit
 	\begin{equation*}
-		v_{\text{g}}=c\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}=c\sqrt{1-\left(\frac{f_c}{f}\right)^2}=c\sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2}
+		v_{\text{g}}=c\sqrt{1-\left(\frac{\beta_\text{c}}{\beta_0}\right)^2}=c\sqrt{1-\left(\frac{f_\text{c}}{f}\right)^2}=c\sqrt{1-\left(\frac{\lambda_0}{\lambda_\text{c}}\right)^2}
 	\end{equation*}
 	
 	Zusammenhang Geschwindigkeiten
@@ -171,7 +171,7 @@ für Freiraumausbreitung und allgemein Vakuum: $\c{\rho}_e=\c{\rho}_m=0$ und $\v
 	
 	Kritische Frequenzen ($a>b$)
 	\begin{equation*}
-		f_{c,m,n} = \frac{c}{2}\cdot\sqrt{\left(\frac{m}{a}\right)^2+\left(\frac{n}{b}\right)^2}	\qquad f_c=\frac{\beta_c}{2\pi\sqrt{\varepsilon\mu}}=\frac{f_{c0}}{\sqrt{\varepsilon_r\mu_r}} \qquad \beta^2_c=\beta^2_0-\beta
+		f_{\text{c},m,n} = \frac{c}{2}\cdot\sqrt{\left(\frac{m}{a}\right)^2+\left(\frac{n}{b}\right)^2}	\qquad f_\text{c}=\frac{\beta_\text{c}}{2\pi\sqrt{\varepsilon\mu}}=\frac{f_{\text{c}0}}{\sqrt{\varepsilon_r\mu_r}} \qquad \beta^2_\text{c}=\beta^2_0-\beta
 	\end{equation*}
 \subsection*{Zweileitersysteme}
 Gruppen- und Phasengeschwindigkeit
@@ -203,17 +203,17 @@ Wellenwiderstand
 \subsection*{Feldwellenwiderstand}
 TE-Wellen
 	\begin{align*}
-		Z_\text{FH} &= \pm\frac{\vc{E}_x}{\vc{H}_y} = \mp\frac{\vc{E}_y}{\vc{H}_x}\\
-		&= \frac{\omega\mu}{\beta} = \frac{\omega\mu}{\beta_0\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}} = \frac{Z_\text{F}}{\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}} = \frac{Z_\text{F}}{\sqrt{1-\left(\frac{f_c}{f_0}\right)^2}} = \frac{Z_\text{F}}{\sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2}}
+		Z_\text{FH} &= \pm\frac{\vc{E}_\text{x}}{\vc{H}_\text{y}} = \mp\frac{\vc{E}_\text{y}}{\vc{H}_\text{x}}\\
+		&= \frac{\omega\mu}{\beta} = \frac{\omega\mu}{\beta_0\sqrt{1-\left(\frac{\beta_\text{c}}{\beta_0}\right)^2}} = \frac{Z_\text{F}}{\sqrt{1-\left(\frac{\beta_\text{c}}{\beta_0}\right)^2}} = \frac{Z_\text{F}}{\sqrt{1-\left(\frac{f_\text{c}}{f_0}\right)^2}} = \frac{Z_\text{F}}{\sqrt{1-\left(\frac{\lambda_0}{\lambda_\text{c}}\right)^2}}
 	\end{align*}
 TM-Wellen
 	\begin{align*}
-		Z_\text{FE} &= \pm\frac{\vc{E}_x}{\vc{H}_y} = \mp\frac{\vc{E}_y}{\vc{H}_x} = \frac{\beta}{\omega\varepsilon} = \frac{\beta_0\sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2}}{\omega\varepsilon} \\
-		&= Z_\text{F} \sqrt{1-\left(\frac{\beta_c}{\beta_0}\right)^2} = Z_\text{F} \sqrt{1-\left(\frac{f_c}{f_0}\right)^2} = Z_\text{F} \sqrt{1-\left(\frac{\lambda_0}{\lambda_c}\right)^2}
+		Z_\text{FE} &= \pm\frac{\vc{E}_\text{x}}{\vc{H}_\text{y}} = \mp\frac{\vc{E}_\text{y}}{\vc{H}_\text{x}} = \frac{\beta}{\omega\varepsilon} = \frac{\beta_0\sqrt{1-\left(\frac{\beta_\text{c}}{\beta_0}\right)^2}}{\omega\varepsilon} \\
+		&= Z_\text{F} \sqrt{1-\left(\frac{\beta_\text{c}}{\beta_0}\right)^2} = Z_\text{F} \sqrt{1-\left(\frac{f_\text{c}}{f_0}\right)^2} = Z_\text{F} \sqrt{1-\left(\frac{\lambda_0}{\lambda_\text{c}}\right)^2}
 	\end{align*}
 TEM-Wellen
 	\begin{equation*}
-		\frac{\vc{E}_x}{\vc{H}_y} = -\frac{\vc{E}_y}{\vc{H}_x} = \pm\frac{\omega\mu}{\beta} = \pm\sqrt{\frac{\mu}{\varepsilon}} = \pm Z_F \qquad Z_{\text{F}0} = \sqrt{\frac{\mu_0}{\varepsilon_0}} = 120\pi\Omega = 377\Omega
+		\frac{\vc{E}_\text{x}}{\vc{H}_\text{y}} = -\frac{\vc{E}_\text{y}}{\vc{H}_\text{x}} = \pm\frac{\omega\mu}{\beta} = \pm\sqrt{\frac{\mu}{\varepsilon}} = \pm Z_F \qquad Z_{\text{F}0} = \sqrt{\frac{\mu_0}{\varepsilon_0}} = 120\pi\Omega = 377\Omega
 	\end{equation*}
 \HL
 \section{Antennentheorie}
@@ -293,7 +293,7 @@ Spannung und Strom an Tor $i$
 	\end{align*}
 Wirkleistung
 	\begin{equation*}
-		P_{wai}=\frac{1}{2}\c{a}_i\c{a}_i^*=\frac{\c{U}_{\text{h}i}\c{U}_{\text{h}i}^*}{2\c{Z}_{\text{L}i}}=\frac{1}{2}|\c{a}_i|^2 \qquad P_{wbi}=\frac{1}{2}\c{b}_i\c{b}_i^*=\frac{\c{U}_{\text{r}i}\c{U}_{\text{r}i}^*}{2\c{Z}_{\text{L}i}}=\frac{1}{2}|\c{b}_i|^2
+		P_{\text{w}ai}=\frac{1}{2}\c{a}_i\c{a}_i^*=\frac{\c{U}_{\text{h}i}\c{U}_{\text{h}i}^*}{2\c{Z}_{\text{L}i}}=\frac{1}{2}|\c{a}_i|^2 \qquad P_{\text{w}bi}=\frac{1}{2}\c{b}_i\c{b}_i^*=\frac{\c{U}_{\text{r}i}\c{U}_{\text{r}i}^*}{2\c{Z}_{\text{L}i}}=\frac{1}{2}|\c{b}_i|^2
 	\end{equation*}
 \subsection{Matrizen}
 Streumatrix
@@ -360,7 +360,7 @@ Verkettung
 
 Reflexions- und Transmissionsfaktoren
 	\begin{equation*}
-		\c{S}_{ii}=\frac{\c{Z}_{\text{E}i}-\c{Z}_{\text{L}i}}{\c{Z}_{\text{E}i}+\c{Z}_{\text{L}i}} \qquad \c{S}_{ji}=2\frac{\c{U}_j}{\c{U}_{0i}}\sqrt{\frac{\c{Z}_{\text{L}i}}{\c{Z}_{\text{L}j}}} \qquad \parbox{0.4\linewidth}{Statt Spannungsverhältnis Widerstandsverhältnis einsetzen (Bei Dreitoren verketteten Spannungsteiler benutzen!)}
+		\c{S}_{ii}=\frac{\c{Z}_{\text{E}i}-\c{Z}_{\text{L}i}}{\c{Z}_{\text{E}i}+\c{Z}_{\text{L}i}} \qquad \c{S}_{ji}=2\frac{\c{U}_j}{\c{U}_{0i}}\sqrt{\frac{\c{Z}_{\text{L}i}}{\c{Z}_{\text{L}j}}} \qquad \parbox{0.4\linewidth}{Statt Einzelspannungen Spannungsteiler einsetzen. Auf Parallelschaltungen Achten)}
 	\end{equation*}
 Serienimpedanz  und Paralleladmittanz
 	\begin{equation*}
@@ -428,7 +428,8 @@ Dezi   & d  & 10$^{–1}$ & Yotta  & Y  & 10$^{24}$\\
 \end{tabular}
 \vfill
 \HL\\
-zusammengestellt von \textsc{Tino Steinmetz} und \textsc{Hermann Pommerenke},\\ basierend auf der Vorlesung von \textsc{Prof. Tobias Weber}\\ \textsc{Universität Rostock}, SS 2015
+\shorthandoff{"}
+zusammengestellt von \textsc{Tino Steinmetz} und \textsc{Hermann Pommerenke},\\ basierend auf der Vorlesung "Hochfrequenztechnik" von \textsc{Prof. Tobias Weber}\\ \textsc{Universität Rostock}, SS 2015
 \end{multicols}	
 
 \end{document}
