@@ -9,11 +9,12 @@
 
 \usepackage{float}
 \usepackage{graphicx}
-\usepackage{amsmath, amsfonts, amssymb,esint}
+\usepackage{amsmath, amsfonts, amssymb,esint,mathtools}
 \usepackage{trfsigns}
 \usepackage{bm}
 \usepackage{empheq}
 \usepackage{siunitx}
+\usepackage{color}
 
 \geometry{top=0.5cm,left=1cm,right=1cm,bottom=0.5cm}
 
@@ -134,10 +135,10 @@ für Freiraumausbreitung und allgemein Vakuum: $\c{\rho}_e=\c{\rho}_m=0$ und $\v
 		\end{equation*}
 	\item Berechnung der Zeitpunkte aus der Phase
 		\begin{equation*}
-			2\omega t_{^\text{max}_\text{min}}+\arctan\left(\frac{A_2}{A_1}\right)=
+			2\omega t_{^\text{max}_\text{\textcolor{red}{min}}}+\arctan\left(\frac{A_2}{A_1}\right)=
 			\begin{matrix}
 				0\\
-				+\pi
+				\textcolor{red}{+\pi}
 			\end{matrix}
 		\end{equation*}
 	\item Winkel der maximalen und Minimalen Amplituden
@@ -251,7 +252,7 @@ Strahlungsleistungsdichte (Allgemeine/Kugel/Dipol)
 	\end{equation*}
 Richtfaktor
 	\begin{equation*}
-		D=\frac{S_{\text{max}}}{S_0}	=\frac{S_{\text{max}}}{P}\cdot4\pi r^2 \qquad \text{bzw.} \qquad D(\vartheta,\varphi)=\frac{S(\vartheta,\varphi)}{S_0} \qquad D_{Kugel}=\frac{S_0}{S_0}=1	
+		D=\frac{S_{\text{max}}}{S_0}	=\frac{S_{\text{max}}}{P}\cdot4\pi r^2 \qquad \text{bzw.} \qquad D(\vartheta,\varphi)=\frac{S(\vartheta,\varphi)}{S_0} \qquad \boxed{D_{Kugel}=\frac{S_0}{S_0}=1}	
 	\end{equation*}
 	%\begin{empheq}[box=\fbox]{equation*}
 	%	D_{Kugel}=\frac{S_0}{S_0}=1	
@@ -327,9 +328,6 @@ Streumatrix
 	\begin{equation*}
 		\c{\matr{b}} = \c{\matr{S}}\cdot\c{\matr{a}} \qquad \c{\matr{S}}^{\ast\text{T}}\cdot\c{\matr{S}}=\matr{E} \qquad \text{Unitaritätskriterium, Vorraussetzung für Verlustfreiheit}
 	\end{equation*}
-	%\begin{equation*}
-	%	\c{\matr{S}}^{\ast\text{T}}\cdot\c{\matr{S}}=\matr{E} \qquad \text{Unitaritätskriterium, Vorraussetzung für Verlustfreiheit}
-	%\end{equation*}
 Transmissionsmatrix
 	\begin{align*}
 		\begin{pmatrix}
@@ -376,12 +374,8 @@ Kettenmatrix
 	\end{equation*}
 Verkettung
 	\begin{equation*}
-		\c{\matr{T}}=\c{\matr{T}}^{(1)}\cdot\c{\matr{T}}^{(2)} \qquad \c{\matr{S}}\neq\c{\matr{S}}^{(1)}\cdot\c{\matr{S}}^{(2)}\textbf{!!!}
+		\c{\matr{T}}=\c{\matr{T}}^{(1)}\cdot\c{\matr{T}}^{(2)} \qquad \boxed{\c{\matr{S}}\neq\c{\matr{S}}^{(1)}\cdot\c{\matr{S}}^{(2)}\textbf{!!!}}
 	\end{equation*}
-	%\begin{empheq}[box=\fbox]{equation*}
-	%	\c{\matr{S}}\neq\c{\matr{S}}^{(1)}\cdot\c{\matr{S}}^{(2)}\textbf{!!!}
-	%\end{empheq}
-
 \subsection{Streuparameter}
 	\includegraphics[width=0.5\linewidth]{img/streuparameter}
 	\mbox{(Oft statt $Z_\text{L}$ auch $R_\text{N}$)}
