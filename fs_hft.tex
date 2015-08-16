@@ -191,7 +191,6 @@ Wellenwiderstand
 	\begin{equation*}
 		\pm Z_\text{L}=\frac{\c{U}(z)}{\c{I}(z)}=\frac{\c{U}_0}{\c{I}_0}
 	\end{equation*}
-
 \subsection{Koaxialleitung}
 	Wellenwiderstand und Leistung
 	\begin{equation*}
@@ -212,6 +211,9 @@ Wellenwiderstand
 \subsection{Zweibandleitung}
 	\begin{equation*}
 		\phi =\frac{y}{b} \qquad \vc{E}=-U_0\nabla\phi e^{-\j\beta z}=-\frac{U_0}{b}e^{\mp\j\beta z}\vec{u}_y \qquad \vc{H}=\pm\frac{U_0}{Z_\text{F}b}e^{\mp\j\beta z}\vec{u}_x
+	\end{equation*}
+	\begin{equation*}
+		\beta_\text{c}=\frac{n\pi}{b} \qquad C'=\frac{C}{l}=\frac{\varepsilon a}{b} \qquad L'=\frac{\mu b}{a} \qquad Z_\text{L}=\sqrt{\frac{L'}{C'}}=\sqrt{\frac{\mu}{\varepsilon}}\frac{b}{a}=Z_\text{F}\frac{b}{a}
 	\end{equation*}
 	%\begin{equation*}
 	%	\vc{E}=-U_0\nabla\phi e^{-\j\beta z}=-\frac{U_0}{b}e^{\mp\j\beta z}\vec{u}_y \qquad \vc{H}=\pm\frac{U_0}{Z_\text{F}b}e^{\mp\j\beta z}\vec{u}_x
@@ -278,11 +280,19 @@ Fußpunktimpedanz und Strahlungswiderstand
 \HL
 \section{Reflexion}
 \subsection{Abstandsabhängige komplexe Wellenamplituden}
-	\includegraphics[width=0.5\linewidth]{img/wellenleiter}
-	\begin{align*}
-		\c{a}(z)&=\c{a}_0(z)e^{-\j\beta z} & \c{\Gamma}_0&=\frac{\c{b}_0}{\c{a}_0}=\frac{\c{Z}-Z_\text{L}}{\c{Z}+Z_\text{L}}=\c{\Gamma}(z=0)\\
-		\c{b}(z)&=\c{b}_0(z)e^{+\j\beta z} & \c{\Gamma}(z)&=\frac{\c{b}(z)}{\c{a}(z)}=\frac{\c{b}_0e^{+\j\beta z}}{\c{a}_0e^{-\j\beta z}}=\c{\Gamma}_0e^{+\j2\beta z}\\
-	\end{align*}
+	\begin{minipage}{0.55\linewidth}
+		\includegraphics[width=\linewidth]{img/wellenleiter}
+	\end{minipage}
+	\begin{minipage}{0.4\linewidth}
+		\begin{align*}
+			\c{a}(z)&=\c{a}_0(z)e^{-\j\beta z}\\
+			\c{b}(z)&=\c{b}_0(z)e^{+\j\beta z}
+		\end{align*}
+	\end{minipage}
+	\begin{equation*}
+		\c{\Gamma}_0=\frac{\c{b}_0}{\c{a}_0}=\frac{\c{Z}-Z_\text{L}}{\c{Z}+Z_\text{L}}=\c{\Gamma}(z=0) \qquad
+		\c{\Gamma}(z)=\frac{\c{b}(z)}{\c{a}(z)}=\frac{\c{b}_0e^{+\j\beta z}}{\c{a}_0e^{-\j\beta z}}=\c{\Gamma}_0e^{+\j2\beta z}
+	\end{equation*}
 	Wenn $z=0$ am Anfang des Leiters muss die Phase von $\c{\Gamma}_0$ zurückgedreht werden. Es gilt (Bsp.):
 	\begin{equation*}
 		\c{\Gamma}_0=\frac{\c{Z}-Z_\text{L}}{\c{Z}+Z_\text{L}}e^{-\j2\beta l}
@@ -293,7 +303,7 @@ Fußpunktimpedanz und Strahlungswiderstand
 	\end{equation*}
 %\HL
 \section{Zweitore}
-Anwendung auf Mehrtore: reflexionsfreier Abschluss nicht betrachteter Tore
+%Anwendung auf Mehrtore: reflexionsfreier Abschluss nicht betrachteter Tore
 \subsection{Wellengrößen}
 	\includegraphics[width=0.5\linewidth]{img/zweitor1}
 	\includegraphics[width=0.5\linewidth]{img/zweitor2}
@@ -315,11 +325,11 @@ Wirkleistung
 \subsection{Matrizen}
 Streumatrix
 	\begin{equation*}
-		\c{\matr{b}} = \c{\matr{S}}\cdot\c{\matr{a}}
+		\c{\matr{b}} = \c{\matr{S}}\cdot\c{\matr{a}} \qquad \c{\matr{S}}^{\ast\text{T}}\cdot\c{\matr{S}}=\matr{E} \qquad \text{Unitaritätskriterium, Vorraussetzung für Verlustfreiheit}
 	\end{equation*}
-	\begin{equation*}
-		\c{\matr{S}}^{\ast\text{T}}\cdot\c{\matr{S}}=\matr{E} \qquad \text{Unitaritätskriterium, Vorraussetzung für Verlustfreiheit}
-	\end{equation*}
+	%\begin{equation*}
+	%	\c{\matr{S}}^{\ast\text{T}}\cdot\c{\matr{S}}=\matr{E} \qquad \text{Unitaritätskriterium, Vorraussetzung für Verlustfreiheit}
+	%\end{equation*}
 Transmissionsmatrix
 	\begin{align*}
 		\begin{pmatrix}
@@ -404,6 +414,7 @@ Serienimpedanz, Paralleladmittanz und Parallelimpedanz
 		\c{\matr{S}}&=\matr{E}-2Z_\text{L}(\c{\matr{Z}}+Z_\text{L}\matr{E})^{-1} & \c{\matr{Z}}&=-Z_\text{L}(\matr{E}+2(\c{\matr{S}}-\matr{E})^{-1})\\
 		&=-\matr{E}+2(Z_\text{L}\c{\matr{Y}}+\matr{E})^{-1} & \c{\matr{Y}}&=-\frac{1}{Z_\text{L}}(\matr{E}-2(\c{\matr{S}}+\matr{E})^{-1})
 	\end{align*}
+%\vfill
 \HL
 \section{Smith-Diagramme}
 \subsection{Ablesen und Antragen der Werte}
@@ -420,8 +431,7 @@ Serienimpedanz, Paralleladmittanz und Parallelimpedanz
 	\end{equation*}
 \subsection*{Additionstheoreme}
 		\begin{align*}
-			\cos^2(\alpha)&=\frac{1}{2}(1+\cos(2\alpha))\\
-			\sin^2(\alpha)&=\frac{1}{2}(1-\cos(2\alpha))\\
+			\cos^2(\alpha)&=\frac{1}{2}(1+\cos(2\alpha)) & \sin^2(\alpha)&=\frac{1}{2}(1-\cos(2\alpha))\\
 			\sin(\alpha)\cos(\beta)&=\frac{1}{2	}(\sin(\alpha-\beta)+\sin(\alpha+\beta))
 		\end{align*}
 \subsection*{SI-Präfixe}
