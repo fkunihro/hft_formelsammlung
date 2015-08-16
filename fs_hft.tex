@@ -105,6 +105,7 @@ für Freiraumausbreitung und allgemein Vakuum: $\c{\rho}_e=\c{\rho}_m=0$ und $\v
 	\item $\alpha_\text{x}-\alpha_\text{y}=\SI{90}{\degree}$ und $|\c{E}_{0\text{x}}|=|\c{E}_{0\text{y}}|$ : rechtsdrehend, zirkular
 	\item $\alpha_\text{y}-\alpha_\text{x}=\SI{90}{\degree}$ und $|\c{E}_{0\text{x}}|=|\c{E}_{0\text{y}}|$ : linksdrehend, zirkular
 \end{itemize}
+
 \subsection{HowTo: zeichnen einer Polarisationsellipse}
 \begin{enumerate}
 	\item Realteile der komplexen Amplituden
@@ -147,9 +148,11 @@ für Freiraumausbreitung und allgemein Vakuum: $\c{\rho}_e=\c{\rho}_m=0$ und $\v
 
 		\includegraphics[width=0.6\linewidth]{img/polarisationsellipse}
 \end{enumerate}
-\HL
-\section{EM-Wellen: allgemeine Zusammenhänge}
-\subsection*{Wellenleiter (konstanter Querschnitt)}
+
+\pagebreak
+\section*{Wellen und Wellenleiter}
+\subsection*{Hohlleiter}
+Übertragung von TE- (H-) und TM- (E-) Moden; TEM-Übetragung nicht möglich;\\erwünscht ist i.d.R. auschließlich der $\text{H}_{10}$-Mode
 	\begin{equation*}
 		\lambda=\frac{\lambda_0}{\sqrt{1-\left(\frac{\beta_\text{c}}{\beta_0 }\right)^2 }}=\frac{\lambda_0}{\sqrt{1-\left(\frac{f_\text{c}}{f}\right)^2 }}=\frac{\lambda_0}{\sqrt{1-\left(\frac{\lambda_0}{\lambda_\text{c}}\right)^2 }}
 	\end{equation*}
@@ -173,14 +176,12 @@ für Freiraumausbreitung und allgemein Vakuum: $\c{\rho}_e=\c{\rho}_m=0$ und $\v
 	\begin{equation*}
 		f_{\text{c},m,n} = \frac{c}{2}\cdot\sqrt{\left(\frac{m}{a}\right)^2+\left(\frac{n}{b}\right)^2}	\qquad f_\text{c}=\frac{\beta_\text{c}}{2\pi\sqrt{\varepsilon\mu}}=\frac{f_{\text{c}0}}{\sqrt{\varepsilon_r\mu_r}} \qquad \beta^2_\text{c}=\beta^2_0-\beta^2
 	\end{equation*}
-\subsection*{Zweileitersysteme}
+\subsection*{Zweileitersysteme allgemein}
+Übertragung von TEM-Wellen mit der Grenzfrequenz $f_c=0$
+
 Gruppen- und Phasengeschwindigkeit
 	\begin{equation*}
 		v_\text{g}=v_\text{p}=\frac{1}{\sqrt{\varepsilon\mu}}=\frac{1}{\sqrt{L'C'}}=c
-	\end{equation*}
-Leitungsbeläge Koaxialleitung
-	\begin{equation*}
-		C' = \frac{C}{l} = \frac{2\pi\varepsilon}{\ln\left(\frac{D}{d}\right)} \qquad L' = \frac{\varepsilon\mu}{C'} = \frac{\mu\ln\left(\frac{D}{d}\right)}{2\pi}
 	\end{equation*}
 Wellenwiderstand
 	\begin{equation*}
@@ -190,6 +191,10 @@ Wellenwiderstand
 	Wellenwiderstand und Leistung
 	\begin{equation*}
 		Z_\text{L}=\frac{1}{2\pi}Z_{\text{F}0}\ln\left(\frac{D}{d}\right) \qquad P=\frac{1}{2}Z_\text{L}I^2_{\text{max}}=\frac{1}{2}\frac{U^2_{\text{max}}}{Z_\text{L}}=\frac{1}{2}\int\limits^{2\pi}_0 \int\limits^D_d \frac{E(r)^2}{Z_\text{F}}\D A
+	\end{equation*}
+	Leitungsbeläge
+	\begin{equation*}
+	C' = \frac{C}{l} = \frac{2\pi\varepsilon}{\ln\left(\frac{D}{d}\right)} \qquad L' = \frac{\varepsilon\mu}{C'} = \frac{\mu\ln\left(\frac{D}{d}\right)}{2\pi}
 	\end{equation*}
 	Feldstärken
 	\begin{equation*}
@@ -217,14 +222,14 @@ TEM-Wellen
 	\end{equation*}
 \HL
 \section{Antennentheorie}
-\subsection{Feldgrößen}
-Vektorpotential Fernfeldnäherung
+\subsection{Feldgrößen in der Fernfeldnäherung}
+Vektorpotential
 	\begin{equation*}
-		\vc{A}(\vec{r})=\frac{\mu e^{-\j\beta r}}{4\pi r}\iiint\limits_V\vc{J}e^{\j\beta r' \cos(\xi)}\D V'
+		\vc{A}(\vec{r})=\frac{\mu e^{-\j\beta r}}{4\pi r}\iiint_V\vc{J}e^{\j\beta r' \cos(\xi)}\D V'
 	\end{equation*}
 Feldstärken
 	\begin{equation*}
-		\vc{B}\approx-\j\beta\vec{u}_r\times\vc{A} \qquad \vc{H}\approx-\frac{\j\beta}{\mu}\vec{u}_r\times\vc{A} \qquad \vc{E}\approx\j\omega\times(\vec{u}_r\times\vc{A})
+		\vc{B}\approx-\j\beta\vec{u}_r\times\vc{A} \qquad \vc{H}\approx-\frac{\j\beta}{\mu}\vec{u}_r\times\vc{A} \qquad \vc{E}\approx\j\omega\vec{u}_r\times(\vec{u}_r\times\vc{A})
 	\end{equation*}
 \subsection{Kenngrößen von Antennen}
 Strahlungsleistungsdichte (Allgemeine/Kugel/Dipol)
@@ -275,8 +280,9 @@ Fußpunktimpedanz und Strahlungswiderstand
 	\begin{equation*}
 		\c{a}(z)=\frac{\c{U}(z)}{\sqrt{Z_\text{L}}}=\pm \sqrt{Z_\text{L}}\c{I}(z) \qquad \c{c}(z)=\c{a}(z)+\c{b}(z)
 	\end{equation*}
-\HL
+%\HL
 \section{Zweitore}
+Anwendung auf Mehrtore: reflexionsfreier Abschluss nicht betrachteter Tore
 \subsection{Wellengrößen}
 	\includegraphics[width=0.5\linewidth]{img/zweitor1}
 	\includegraphics[width=0.5\linewidth]{img/zweitor2}
@@ -395,7 +401,7 @@ Serienimpedanz, Paralleladmittanz und Parallelimpedanz
 	\begin{equation*}
 		|\c{\Gamma}|=r=\frac{\c{Z}-Z_\text{L}}{\c{Z}+Z_\text{L}}=\frac{\c{z}-1}{\c{z}+1}=\frac{s-1}{s+1}=\frac{1-m}{1+m}\qquad s=\frac{1}{m}=\frac{1+|r|}{1-|r|}
 	\end{equation*}
-\HL
+%\HL
 \section{Allgemeines}
 	\begin{equation*}
 		\si{\decibel}=10\log(\dots) \qquad \si{\decibel}_\text{m}=10\log\left(\frac{P}{\SI{1}{\milli\watt}}\right)
