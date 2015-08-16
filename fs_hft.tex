@@ -176,6 +176,10 @@ für Freiraumausbreitung und allgemein Vakuum: $\c{\rho}_e=\c{\rho}_m=0$ und $\v
 	\begin{equation*}
 		f_{\text{c},m,n} = \frac{c}{2}\cdot\sqrt{\left(\frac{m}{a}\right)^2+\left(\frac{n}{b}\right)^2}	\qquad f_\text{c}=\frac{\beta_\text{c}}{2\pi\sqrt{\varepsilon\mu}}=\frac{f_{\text{c}0}}{\sqrt{\varepsilon_r\mu_r}} \qquad \beta^2_\text{c}=\beta^2_0-\beta^2
 	\end{equation*}
+	Flächenstromdichte auf dem Rand (Auch für Bandleitung geeignet)
+	\begin{equation*}
+		\vc{J}_\text{F}(x=0,y,z)=\vec{U}_\text{x}\times\vc{H}(x=0,y,z)
+	\end{equation*}
 \subsection*{Zweileitersysteme allgemein}
 Übertragung von TEM-Wellen mit der Grenzfrequenz $f_c=0$
 
@@ -187,6 +191,7 @@ Wellenwiderstand
 	\begin{equation*}
 		\pm Z_\text{L}=\frac{\c{U}(z)}{\c{I}(z)}=\frac{\c{U}_0}{\c{I}_0}
 	\end{equation*}
+
 \subsection{Koaxialleitung}
 	Wellenwiderstand und Leistung
 	\begin{equation*}
@@ -204,7 +209,13 @@ Wellenwiderstand
 	\begin{equation*}
 		S_\text{I}=\frac{1}{2}E_\text{max}\cdot H_\text{max} \qquad S_\text{A}=S_\text{I}\frac{d^2}{D^2}
 	\end{equation*}
-	
+\subsection{Zweibandleitung}
+	\begin{equation*}
+		\phi =\frac{y}{b} \qquad \vc{E}=-U_0\nabla\phi e^{-\j\beta z}=-\frac{U_0}{b}e^{\mp\j\beta z}\vec{u}_y \qquad \vc{H}=\pm\frac{U_0}{Z_\text{F}b}e^{\mp\j\beta z}\vec{u}_x
+	\end{equation*}
+	%\begin{equation*}
+	%	\vc{E}=-U_0\nabla\phi e^{-\j\beta z}=-\frac{U_0}{b}e^{\mp\j\beta z}\vec{u}_y \qquad \vc{H}=\pm\frac{U_0}{Z_\text{F}b}e^{\mp\j\beta z}\vec{u}_x
+	%\end{equation*}
 \subsection*{Feldwellenwiderstand}
 TE-Wellen
 	\begin{align*}
@@ -238,11 +249,11 @@ Strahlungsleistungsdichte (Allgemeine/Kugel/Dipol)
 	\end{equation*}
 Richtfaktor
 	\begin{equation*}
-		D=\frac{S_{\text{max}}}{S_0}	=\frac{S_{\text{max}}}{P}\cdot4\pi r^2 \qquad \text{bzw.} \qquad D(\vartheta,\varphi)=\frac{S(\vartheta,\varphi)}{S_0}
+		D=\frac{S_{\text{max}}}{S_0}	=\frac{S_{\text{max}}}{P}\cdot4\pi r^2 \qquad \text{bzw.} \qquad D(\vartheta,\varphi)=\frac{S(\vartheta,\varphi)}{S_0} \qquad D_{Kugel}=\frac{S_0}{S_0}=1	
 	\end{equation*}
-	\begin{empheq}[box=\fbox]{equation*}
-		D_{Kugel}=\frac{S_0}{S_0}=1	
-	\end{empheq}
+	%\begin{empheq}[box=\fbox]{equation*}
+	%	D_{Kugel}=\frac{S_0}{S_0}=1	
+	%\end{empheq}
 
 Gewinn und Zusammenhang mit Wirkfläche für alle Antennen
 	\begin{equation*}
@@ -355,11 +366,11 @@ Kettenmatrix
 	\end{equation*}
 Verkettung
 	\begin{equation*}
-		\c{\matr{T}}=\c{\matr{T}}^{(1)}\cdot\c{\matr{T}}^{(2)}
+		\c{\matr{T}}=\c{\matr{T}}^{(1)}\cdot\c{\matr{T}}^{(2)} \qquad \c{\matr{S}}\neq\c{\matr{S}}^{(1)}\cdot\c{\matr{S}}^{(2)}\textbf{!!!}
 	\end{equation*}
-	\begin{empheq}[box=\fbox]{equation*}
-		\c{\matr{S}}\neq\c{\matr{S}}^{(1)}\cdot\c{\matr{S}}^{(2)}\textbf{!!!}
-	\end{empheq}
+	%\begin{empheq}[box=\fbox]{equation*}
+	%	\c{\matr{S}}\neq\c{\matr{S}}^{(1)}\cdot\c{\matr{S}}^{(2)}\textbf{!!!}
+	%\end{empheq}
 
 \subsection{Streuparameter}
 	\includegraphics[width=0.5\linewidth]{img/streuparameter}
@@ -398,21 +409,22 @@ Serienimpedanz, Paralleladmittanz und Parallelimpedanz
 \subsection{Ablesen und Antragen der Werte}
 	\includegraphics[width=0.45\linewidth]{img/rzsm}
 	\includegraphics[width=0.45\linewidth]{img/bauelemente}
+	
 	\begin{equation*}
 		|\c{\Gamma}|=r=\frac{\c{Z}-Z_\text{L}}{\c{Z}+Z_\text{L}}=\frac{\c{z}-1}{\c{z}+1}=\frac{s-1}{s+1}=\frac{1-m}{1+m}\qquad s=\frac{1}{m}=\frac{1+|r|}{1-|r|}
 	\end{equation*}
-%\HL
-\section{Allgemeines}
+\HL
+\section*{Allgemeines}
 	\begin{equation*}
 		\si{\decibel}=10\log(\dots) \qquad \si{\decibel}_\text{m}=10\log\left(\frac{P}{\SI{1}{\milli\watt}}\right)
 	\end{equation*}
-\subsection{Additionstheoreme}
+\subsection*{Additionstheoreme}
 		\begin{align*}
 			\cos^2(\alpha)&=\frac{1}{2}(1+\cos(2\alpha))\\
 			\sin^2(\alpha)&=\frac{1}{2}(1-\cos(2\alpha))\\
 			\sin(\alpha)\cos(\beta)&=\frac{1}{2	}(\sin(\alpha-\beta)+\sin(\alpha+\beta))
 		\end{align*}
-\subsection{SI-Präfixe}
+\subsection*{SI-Präfixe}
 \begin{tabular}{|l|l|l||l|l|l|}
 \hline
 \textbf{Präfix} & \textbf{Zeichen} & \textbf{Faktor} & \textbf{Präfix} & \textbf{Zeichen} & \textbf{Faktor}\\
