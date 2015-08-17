@@ -96,6 +96,10 @@ für Freiraumausbreitung und allgemein Vakuum: $\c{\rho}_e=\c{\rho}_m=0$ und $\v
 		\c{E}_\text{x}\beta_\text{c}^2&=\mp\j\beta\frac{\partial\c{E}_\text{z}}{\partial x}-\j\omega\mu\frac{\partial\c{H}_\text{z}}{\partial y} & \c{E}_\text{y}\beta_\text{c}^2&=\mp\j\beta\frac{\partial\c{E}_\text{z}}{\partial y}+\j\omega\mu\frac{\partial\c{H}_\text{z}}{\partial x}\\
 		\c{H}_\text{x}\beta_\text{c}^2&=\mp\j\beta\frac{\partial\c{H}_\text{z}}{\partial x}+\j\omega\varepsilon\frac{\partial\c{E}_\text{z}}{\partial y} & \c{H}_\text{y}\beta_\text{c}^2&=\mp\j\beta\frac{\partial\c{H}_\text{z}}{\partial y}-\j\omega\varepsilon\frac{\partial\c{E}_\text{z}}{\partial x}
 	\end{align*}
+\subsection{Helmholtzgleichungen}
+	\begin{equation*}
+		\bigtriangleup\vc{H}+\beta^2_\text{c}\vc{H}=0 \qquad \bigtriangleup\vc{E}+\beta^2_\text{c}\vc{E}=0
+	\end{equation*}
 \HL
 \section{Polarisation}
 \subsection{Drehsinn und Form}
@@ -175,11 +179,11 @@ für Freiraumausbreitung und allgemein Vakuum: $\c{\rho}_e=\c{\rho}_m=0$ und $\v
 	
 	Kritische Frequenzen ($a>b$)
 	\begin{equation*}
-		f_{\text{c},m,n} = \frac{c}{2}\cdot\sqrt{\left(\frac{m}{a}\right)^2+\left(\frac{n}{b}\right)^2}	\qquad f_\text{c}=\frac{\beta_\text{c}}{2\pi\sqrt{\varepsilon\mu}}=\frac{f_{\text{c}0}}{\sqrt{\varepsilon_r\mu_r}} \qquad \beta^2_\text{c}=\beta^2_0-\beta^2
+		f_{\text{c},m,n} = \frac{c}{2}\cdot\sqrt{\left(\frac{m}{a}\right)^2+\left(\frac{n}{b}\right)^2}	\qquad f_\text{c}=\frac{\beta_\text{c}}{2\pi\sqrt{\varepsilon\mu}}=\frac{f_{\text{c}0}}{\sqrt{\varepsilon_r\mu_r}} \qquad \beta^2_\text{c}=\beta^2_0-\beta^2 \qquad \beta_0=\omega\sqrt{\varepsilon\mu}
 	\end{equation*}
 	Flächenstromdichte auf dem Rand (Auch für Bandleitung geeignet)
 	\begin{equation*}
-		\vc{J}_\text{F}(x=0,y,z)=\vec{U}_\text{x}\times\vc{H}(x=0,y,z)
+		\vc{J}_\text{F}(x=0,y,z)=\vec{u}_\text{x}\times\vc{H}(x=0,y,z)
 	\end{equation*}
 \subsection*{Zweileitersysteme allgemein}
 Übertragung von TEM-Wellen mit der Grenzfrequenz $f_c=0$
@@ -209,16 +213,16 @@ Wellenwiderstand
 	\begin{equation*}
 		S_\text{I}=\frac{1}{2}E_\text{max}\cdot H_\text{max} \qquad S_\text{A}=S_\text{I}\frac{d^2}{D^2}
 	\end{equation*}
-\subsection{Zweibandleitung}
+\subsection{Bandleitung}
+	\begin{equation*}
+		\text{TEM: }\vc{E}=-U_0\frac{1}{b}e^{\mp\j\beta z}\vec{u}_\text{y} \qquad \text{TE: }\vc{H}_\text{z}=H_0\cos\left(\frac{n\pi y}{b}\right)e^{\mp\j\beta z} \qquad \text{TM: }\vc{E}_\text{z}=E_0\sin\left(\frac{n\pi y}{b}\right)e^{\mp\j\beta z}
+	\end{equation*}
 	\begin{equation*}
 		\phi =\frac{y}{b} \qquad \vc{E}=-U_0\nabla\phi e^{-\j\beta z}=-\frac{U_0}{b}e^{\mp\j\beta z}\vec{u}_y \qquad \vc{H}=\pm\frac{U_0}{Z_\text{F}b}e^{\mp\j\beta z}\vec{u}_x
 	\end{equation*}
 	\begin{equation*}
 		\beta_\text{c}=\frac{n\pi}{b} \qquad C'=\frac{C}{l}=\frac{\varepsilon a}{b} \qquad L'=\frac{\mu b}{a} \qquad Z_\text{L}=\sqrt{\frac{L'}{C'}}=\sqrt{\frac{\mu}{\varepsilon}}\frac{b}{a}=Z_\text{F}\frac{b}{a}
 	\end{equation*}
-	%\begin{equation*}
-	%	\vc{E}=-U_0\nabla\phi e^{-\j\beta z}=-\frac{U_0}{b}e^{\mp\j\beta z}\vec{u}_y \qquad \vc{H}=\pm\frac{U_0}{Z_\text{F}b}e^{\mp\j\beta z}\vec{u}_x
-	%\end{equation*}
 \subsection*{Feldwellenwiderstand}
 TE-Wellen
 	\begin{align*}
@@ -232,7 +236,7 @@ TM-Wellen
 	\end{align*}
 TEM-Wellen
 	\begin{equation*}
-		\frac{\vc{E}_\text{x}}{\vc{H}_\text{y}} = -\frac{\vc{E}_\text{y}}{\vc{H}_\text{x}} = \pm\frac{\omega\mu}{\beta} = \pm\sqrt{\frac{\mu}{\varepsilon}} = \pm Z_F \qquad Z_{\text{F}0} = \sqrt{\frac{\mu_0}{\varepsilon_0}} = 120\pi\Omega = 377\Omega
+		\frac{\vc{E}_\text{x}}{\vc{H}_\text{y}} = -\frac{\vc{E}_\text{y}}{\vc{H}_\text{x}} = \pm\frac{\omega\mu}{\beta} = \pm\sqrt{\frac{\mu}{\varepsilon}} = \pm Z_F \qquad Z_{\text{F}0} = \sqrt{\frac{\mu_0}{\varepsilon_0}} = 120\pi\Omega = 377\Omega \qquad v_\text{p}=v_\text{g}=c
 	\end{equation*}
 \HL
 \section{Antennentheorie}
@@ -252,17 +256,13 @@ Strahlungsleistungsdichte (Allgemeine/Kugel/Dipol)
 	\end{equation*}
 Richtfaktor
 	\begin{equation*}
-		D=\frac{S_{\text{max}}}{S_0}	=\frac{S_{\text{max}}}{P}\cdot4\pi r^2 \qquad \text{bzw.} \qquad D(\vartheta,\varphi)=\frac{S(\vartheta,\varphi)}{S_0} \qquad \boxed{D_{Kugel}=\frac{S_0}{S_0}=1}	
+		D=\frac{S_{\text{max}}}{S_0}	=\frac{S_{\text{max}}}{P}\cdot4\pi r^2 \qquad \text{bzw.} \qquad D(\vartheta,\varphi)=\frac{S(\vartheta,\varphi)}{S_0} \qquad \boxed{D_\text{Kugel}=\frac{S_0}{S_0}=1}	
 	\end{equation*}
-	%\begin{empheq}[box=\fbox]{equation*}
-	%	D_{Kugel}=\frac{S_0}{S_0}=1	
-	%\end{empheq}
-
 Gewinn und Zusammenhang mit Wirkfläche für alle Antennen
 	\begin{equation*}
 		G=\eta D \qquad \frac{A}{G}=\frac{\lambda^2}{4\pi}
 	\end{equation*}
-Richcharakteristik
+Richtcharakteristik
 	\begin{equation*}
 		C(\vartheta,\varphi)=\frac{\left\Vert\vc{E}(\vartheta,\varphi)\right\Vert}{\left\Vert\vc{E}\right\Vert_\text{max}}=\frac{\left\Vert\vc{H}(\vartheta,\varphi)\right\Vert}{\left\Vert\vc{H}\right\Vert_\text{max}}=\sqrt{\frac{S(\vartheta,\varphi)}{S_\text{max}}}
 	\end{equation*}
@@ -300,11 +300,11 @@ Fußpunktimpedanz und Strahlungswiderstand
 	\end{equation*}
 	$U(z)$ und $I(z)$ können so berechnet werden wie an einem Tor eines Zweitores. Dafür Ausdruck so umformen, dass Abhängigkeit nur noch von $\c{a}$
 	\begin{equation*}
-		\c{a}(z)=\frac{\c{U}(z)}{\sqrt{Z_\text{L}}}=\pm \sqrt{Z_\text{L}}\c{I}(z) \qquad \c{c}(z)=\c{a}(z)+\c{b}(z)
+		\c{a}(z)=\frac{1}{2}\left(\frac{\c{U}(z)}{\sqrt{Z_\text{L}}}+ \sqrt{Z_\text{L}}\c{I}(z)\right) \qquad \c{b}(z)=\frac{1}{2}\left(\frac{\c{U}(z)}{\sqrt{Z_\text{L}}}- \sqrt{Z_\text{L}}\c{I}(z)\right) \qquad \c{c}(z)=\c{a}(z)+\c{b}(z)
 	\end{equation*}
-%\HL
+\HL
 \section{Zweitore}
-%Anwendung auf Mehrtore: reflexionsfreier Abschluss nicht betrachteter Tore
+Für Anwendung auf Mehrtore nicht betrachtete Tore reflexionsfrei abschließen
 \subsection{Wellengrößen}
 	\includegraphics[width=0.5\linewidth]{img/zweitor1}
 	\includegraphics[width=0.5\linewidth]{img/zweitor2}
@@ -382,7 +382,7 @@ Verkettung
 
 Reflexions- und Transmissionsfaktoren
 	\begin{equation*}
-		\c{S}_{ii}=\frac{\c{Z}_{\text{E}i}-Z_{\text{L}i}}{\c{Z}_{\text{E}i}+Z_{\text{L}i}} \qquad \c{S}_{ji}=2\frac{\c{U}_j}{\c{U}_{0i}}\sqrt{\frac{Z_{\text{L}i}}{Z_{\text{L}j}}} \qquad \parbox{0.4\linewidth}{Statt Einzelspannungen Spannungsteiler einsetzen. Auf Parallelschaltungen Achten}
+		\c{S}_{ii}=\frac{\c{b}_i}{\c{a}_i}=\frac{\c{Z}_{\text{E}i}-Z_{\text{L}i}}{\c{Z}_{\text{E}i}+Z_{\text{L}i}} \qquad \c{S}_{ji}0\frac{\c{b}_j}{\c{a}_i}=2\frac{\c{U}_j}{\c{U}_{0i}}\sqrt{\frac{Z_{\text{L}i}}{Z_{\text{L}j}}} \qquad \parbox{0.4\linewidth}{Statt Einzelspannungen Spannungsteiler einsetzen. Auf Parallelschaltungen Achten}
 	\end{equation*}
 Serienimpedanz, Paralleladmittanz und Parallelimpedanz
 	\begin{align*}
@@ -454,6 +454,19 @@ Zenti  & c  & $10^{-2}$ & Zetta  & Z  & $10^{21}$\\
 Dezi   & d  & $10^{-1}$ & Yotta  & Y  & $10^{24}$\\
 \hline
 \end{tabular}
+\subsection{Anpassung}
+	\begin{equation*}
+		P=\frac{1}{4}\frac{U^2}{R_\text{i}}=\frac{1}{4}I^2R_\text{i} \qquad \text{Reflexionsfreiheit und maximaler Wirkungsgrad $\eta=\SI{50}{\percent}$}
+	\end{equation*}
+\subsection{Koordinatenumwandlung}
+	\begin{align*}
+		x&=r\sin(\theta)\cos(\varphi) & y&=r\sin(\theta)\sin(\varphi) & z&=r\cos(\theta)\\
+		r&=\sqrt{x^2+y^2+z^2} & \theta &=\arctan\left(\frac{\sqrt{x^2+y^2}}{z}\right) & \varphi &=\arctan\left(\frac{y}{x}\right)
+	\end{align*}
+\subsection{Randbedingungen Helmholtzgleichung}
+	\begin{equation*}
+		\left.\frac{\partial\c{H}_\text{z}}{\partial x}\right|_{^{x=0}_{x=a}}=0 \qquad \left.\frac{\partial\c{H}_\text{z}}{\partial y}\right|_{^{y=0}_{y=b}}=0 \qquad \left.\c{E}_\text{z}\right|_{^{x=0}_{x=a}}=0 \qquad \left.\c{E}_\text{z}\right|_{^{y=0}_{y=b}}=0
+	\end{equation*}
 \vfill
 \HL\\
 \shorthandoff{"}
