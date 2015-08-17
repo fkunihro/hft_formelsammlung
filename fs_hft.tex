@@ -98,7 +98,7 @@ für Freiraumausbreitung und allgemein Vakuum: $\c{\rho}_e=\c{\rho}_m=0$ und $\v
 	\end{align*}
 \subsection{Helmholtzgleichungen}
 	\begin{equation*}
-		\bigtriangleup\vc{H}+\beta^2_\text{c}\vc{H}=0 \qquad \bigtriangleup\vc{E}+\beta^2_\text{c}\vc{E}=0
+		\Delta\vc{H}+\beta^2_\text{c}\vc{H}=0 \qquad \Delta\vc{E}+\beta^2_\text{c}\vc{E}=0
 	\end{equation*}
 \HL
 \section{Polarisation}
@@ -196,15 +196,16 @@ Wellenwiderstand
 	\begin{equation*}
 		\pm Z_\text{L}=\frac{\c{U}(z)}{\c{I}(z)}=\frac{\c{U}_0}{\c{I}_0}
 	\end{equation*}
+	
 \subsection{Koaxialleitung}
-	Wellenwiderstand und Leistung
+	Wellenwiderstand, Leistung und Leitungsbeläge
 	\begin{equation*}
-		Z_\text{L}=\frac{1}{2\pi}Z_{\text{F}0}\ln\left(\frac{D}{d}\right) \qquad P=\frac{1}{2}Z_\text{L}I^2_{\text{max}}=\frac{1}{2}\frac{U^2_{\text{max}}}{Z_\text{L}}=\frac{1}{2}\int\limits^{2\pi}_0 \int\limits^D_d \frac{E(r)^2}{Z_\text{F}}\D A
+		C' = \frac{C}{l} = \frac{2\pi\varepsilon}{\ln\left(\frac{r_\text{a}}{r_\text{i}}\right)} \qquad L' = \frac{\varepsilon\mu}{C'} = \frac{\mu\ln\left(\frac{r_\text{a}}{r_\text{i}}\right)}{2\pi}
 	\end{equation*}
-	Leitungsbeläge
 	\begin{equation*}
-	C' = \frac{C}{l} = \frac{2\pi\varepsilon}{\ln\left(\frac{D}{d}\right)} \qquad L' = \frac{\varepsilon\mu}{C'} = \frac{\mu\ln\left(\frac{D}{d}\right)}{2\pi}
+		Z_\text{L}=\frac{1}{2\pi}Z_{\text{F}0}\ln\left(\frac{r_\text{a}}{r_\text{i}}\right) \qquad P=\frac{1}{2}Z_\text{L}I^2_{\text{max}}=\frac{1}{2}\frac{U^2_{\text{max}}}{Z_\text{L}}=\frac{1}{2}\int^{2\pi}_0 \int^{r_\text{a}}_{r_\text{i}} \frac{E(r)^2}{Z_\text{F}}\D A
 	\end{equation*}
+	
 	Feldstärken
 	\begin{equation*}
 		H_\text{max}=\frac{I_\text{max}}{\pi d} \qquad E_\text{max}=Z_\text{F}H_\text{max}
@@ -382,7 +383,7 @@ Verkettung
 
 Reflexions- und Transmissionsfaktoren
 	\begin{equation*}
-		\c{S}_{ii}=\frac{\c{b}_i}{\c{a}_i}=\frac{\c{Z}_{\text{E}i}-Z_{\text{L}i}}{\c{Z}_{\text{E}i}+Z_{\text{L}i}} \qquad \c{S}_{ji}0\frac{\c{b}_j}{\c{a}_i}=2\frac{\c{U}_j}{\c{U}_{0i}}\sqrt{\frac{Z_{\text{L}i}}{Z_{\text{L}j}}} \qquad \parbox{0.4\linewidth}{Statt Einzelspannungen Spannungsteiler einsetzen. Auf Parallelschaltungen Achten}
+		\c{S}_{ii}=\frac{\c{b}_i}{\c{a}_i}=\frac{\c{Z}_{\text{E}i}-Z_{\text{L}i}}{\c{Z}_{\text{E}i}+Z_{\text{L}i}} \qquad \c{S}_{ji}=\frac{\c{b}_j}{\c{a}_i}=2\frac{\c{U}_j}{\c{U}_{0i}}\sqrt{\frac{Z_{\text{L}i}}{Z_{\text{L}j}}} \qquad \parbox{0.4\linewidth}{Statt Einzelspannungen Spannungsteiler einsetzen. Auf Parallelschaltungen achten}
 	\end{equation*}
 Serienimpedanz, Paralleladmittanz und Parallelimpedanz
 	\begin{align*}
